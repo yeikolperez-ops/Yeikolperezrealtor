@@ -1,0 +1,53 @@
+{
+  "stories": [
+    {
+      "name": "Familia Díaz",
+      "location": "Greenacres, FL",
+      "photo": "/assets/story-key-family1.jpg",
+      "story": "Un cubano y una colombiana, con su hijo (fanático del fútbol) formando la nueva generación. Nos llamaron después de haber intentado con otros agentes que no les funcionaron. La primera casa que vimos juntos les encantó — la negociamos en $250,000, un townhouse de 3 habitaciones.",
+      "quote": "Después de intentarlo con otros agentes sin resultado, con Yeikol encontramos la casa perfecta desde la primera visita."
+    },
+    {
+      "name": "Selina y Francisco",
+      "location": "Riviera Beach, FL",
+      "photo": "/assets/story-clients-toast.jpg",
+      "story": "Pareja guatemalteca — con menos de 30 años, ya lograron comprar su primera casa propia en Estados Unidos. Este brindis en Home Financial Resources marcó el cierre oficial.",
+      "quote": "cinco estrellas — así calificaron el proceso completo, de principio a fin."
+    },
+    {
+      "name": "Gabriela",
+      "location": "Loxahatchee, FL",
+      "photo": "/assets/story-keys-handoff.jpg",
+      "story": "Gabriela fue compañera de trabajo de Yeikol cuando recién llegó a este país. Hoy tiene su primera casa propia — un terreno de más de un acre en Loxahatchee que tenía múltiples ofertas sobre la mesa. La compró con menos de 25 años.",
+      "quote": "De compañeros de trabajo a que hoy tenga las llaves de su propia casa — así es esta comunidad."
+    },
+    {
+      "name": "Mark — Familia Villeda",
+      "location": "Oficina Partnership Realty",
+      "photo": "/assets/story-clients-group.jpg",
+      "story": "Mark ya había perdido dinero antes con otro agente. Decidió darle una oportunidad a Yeikol, y hoy él y su esposa ya tienen las llaves de su casa.",
+      "quote": "Después de una mala experiencia, confiar de nuevo no fue fácil — pero valió la pena."
+    },
+    {
+      "name": "Marta y su esposo",
+      "location": "Homestead, FL",
+      "photo": "/assets/story-clients-office.jpg",
+      "story": "Familia guatemalteca que, como tantas otras, encontró en Yeikol la guía que necesitaba para comprar su primera casa en Estados Unidos.",
+      "quote": "Nos explicó cada paso del proceso de financiamiento hasta que todo tuvo sentido."
+    },
+    {
+      "name": "Anaisa y Ulises",
+      "location": "Greenacres, FL",
+      "photo": "/assets/story-clients-signing1.jpg",
+      "story": "Más de 15 años viviendo en Estados Unidos sin haber comprado casa propia. Cuando llamaron a Yeikol, la respuesta fue clara: sí es posible. Hoy tienen su primera casa — comprada con menos de $5,000.",
+      "quote": "15 años pensando que no era posible, hasta que encontramos a alguien que nos dijo cómo sí se podía."
+    },
+    {
+      "name": "Sergio",
+      "location": "Greenacres, FL",
+      "photo": "/assets/story-clients-signing2.jpg",
+      "story": "El hijo de Anaisa y Ulises, siguiendo los pasos de sus papás hacia su propia independencia con casa propia.",
+      "quote": "Ver a toda la familia, generación tras generación, lograr esto — no hay nada mejor."
+    }
+  ]
+}

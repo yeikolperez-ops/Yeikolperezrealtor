@@ -1,0 +1,30 @@
+{
+  "rating": "4.8",
+  "count": 10,
+  "items": [
+    {
+      "name": "Cliente verificado",
+      "stars": 5,
+      "text": "The Best Realtor ever.",
+      "source": "Google"
+    },
+    {
+      "name": "Cliente verificado",
+      "stars": 5,
+      "text": "Nunca pensé que encontraría tanta experiencia y un deseo genuino de ayudar en alguien tan joven. A pesar de su edad, Yeikol ha aprovechado el tiempo y adquirido un conocimiento que lo ha convertido en un experto. Nuestra experiencia comprando con él fue la mejor; superó nuestras expectativas.",
+      "source": "Google"
+    },
+    {
+      "name": "Cliente verificado",
+      "stars": 5,
+      "text": "Yeikol fue muy amable y atento desde el principio. Siempre estuvo disponible para ayudar e hizo el proceso mucho más fácil. Lo recomiendo ampliamente.",
+      "source": "Google"
+    },
+    {
+      "name": "Cliente verificado",
+      "stars": 5,
+      "text": "Mi experiencia fue realmente buena, Yeikol fue súper paciente, atento a cualquier duda que tuvimos, siempre explicando todo. Fue una experiencia maravillosa, lo recomiendo 100%.",
+      "source": "Google"
+    }
+  ]
+}
