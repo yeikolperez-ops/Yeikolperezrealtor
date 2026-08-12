@@ -41,88 +41,8 @@
 <section class="stories-section">
   <div class="wrap">
 
-    <div class="story-card">
-      <div class="story-photo" style="background-image:url('assets/story-key-family1.jpg'); background-size:cover; background-position:center;">
-        <span class="tag">Greenacres, FL</span>
-      </div>
-      <div class="story-content">
-        <span class="loc-tag">📍 Greenacres, FL</span>
-        <h3>Familia Díaz</h3>
-        <p>Un cubano y una colombiana, con su hijo (fanático del fútbol) formando la nueva generación. Nos llamaron después de haber intentado con otros agentes que no les funcionaron. La primera casa que vimos juntos les encantó — la negociamos en $250,000, un townhouse de 3 habitaciones.</p>
-        <div class="quote">"Después de intentarlo con otros agentes sin resultado, con Yeikol encontramos la casa perfecta desde la primera visita."</div>
-      </div>
-    </div>
-
-    <div class="story-card">
-      <div class="story-photo" style="background-image:url('assets/story-clients-toast.jpg'); background-size:cover; background-position:center;">
-        <span class="tag">Riviera Beach, FL</span>
-      </div>
-      <div class="story-content">
-        <span class="loc-tag">📍 Riviera Beach, FL</span>
-        <h3>Selina y Francisco</h3>
-        <p>Pareja guatemalteca — con menos de 30 años, ya lograron comprar su primera casa propia en Estados Unidos. Este brindis en Home Financial Resources marcó el cierre oficial.</p>
-        <div class="quote">"cinco estrellas — así calificaron el proceso completo, de principio a fin."</div>
-      </div>
-    </div>
-
-    <div class="story-card">
-      <div class="story-photo" style="background-image:url('assets/story-keys-handoff.jpg'); background-size:cover; background-position:center;">
-        <span class="tag">Loxahatchee, FL</span>
-      </div>
-      <div class="story-content">
-        <span class="loc-tag">📍 Loxahatchee, FL</span>
-        <h3>Gabriela</h3>
-        <p>Gabriela fue compañera de trabajo de Yeikol cuando recién llegó a este país. Hoy tiene su primera casa propia — un terreno de más de un acre en Loxahatchee que tenía múltiples ofertas sobre la mesa. La compró con menos de 25 años.</p>
-        <div class="quote">"De compañeros de trabajo a que hoy tenga las llaves de su propia casa — así es esta comunidad."</div>
-      </div>
-    </div>
-
-    <div class="story-card">
-      <div class="story-photo" style="background-image:url('assets/story-clients-group.jpg'); background-size:cover; background-position:center;">
-        <span class="tag">Oficina Partnership Realty</span>
-      </div>
-      <div class="story-content">
-        <span class="loc-tag">📍 Oficina Partnership Realty</span>
-        <h3>Mark — Familia Villeda</h3>
-        <p>Mark ya había perdido dinero antes con otro agente. Decidió darle una oportunidad a Yeikol, y hoy él y su esposa ya tienen las llaves de su casa.</p>
-        <div class="quote">"Después de una mala experiencia, confiar de nuevo no fue fácil — pero valió la pena."</div>
-      </div>
-    </div>
-
-    <div class="story-card">
-      <div class="story-photo" style="background-image:url('assets/story-clients-office.jpg'); background-size:cover; background-position:center;">
-        <span class="tag">Homestead, FL</span>
-      </div>
-      <div class="story-content">
-        <span class="loc-tag">📍 Homestead, FL</span>
-        <h3>Marta y su esposo</h3>
-        <p>Familia guatemalteca que, como tantas otras, encontró en Yeikol la guía que necesitaba para comprar su primera casa en Estados Unidos.</p>
-        <div class="quote">"Nos explicó cada paso del proceso de financiamiento hasta que todo tuvo sentido."</div>
-      </div>
-    </div>
-
-    <div class="story-card">
-      <div class="story-photo" style="background-image:url('assets/story-clients-signing1.jpg'); background-size:cover; background-position:center;">
-        <span class="tag">Greenacres, FL</span>
-      </div>
-      <div class="story-content">
-        <span class="loc-tag">📍 Greenacres, FL</span>
-        <h3>Anaisa y Ulises</h3>
-        <p>Más de 15 años viviendo en Estados Unidos sin haber comprado casa propia. Cuando llamaron a Yeikol, la respuesta fue clara: sí es posible. Hoy tienen su primera casa — comprada con menos de $5,000.</p>
-        <div class="quote">"15 años pensando que no era posible, hasta que encontramos a alguien que nos dijo cómo sí se podía."</div>
-      </div>
-    </div>
-
-    <div class="story-card">
-      <div class="story-photo" style="background-image:url('assets/story-clients-signing2.jpg'); background-size:cover; background-position:center;">
-        <span class="tag">Greenacres, FL</span>
-      </div>
-      <div class="story-content">
-        <span class="loc-tag">📍 Greenacres, FL</span>
-        <h3>Sergio</h3>
-        <p>El hijo de Anaisa y Ulises, siguiendo los pasos de sus papás hacia su propia independencia con casa propia.</p>
-        <div class="quote">"Ver a toda la familia, generación tras generación, lograr esto — no hay nada mejor."</div>
-      </div>
+    <div id="stories-container">
+      <p style="text-align:center; color:var(--ink-70); padding:40px 0;">Cargando historias...</p>
     </div>
 
     <div class="upload-story-cta">
@@ -164,6 +84,38 @@
 </footer>
 
 <script>
+  async function loadStories(){
+    const container = document.getElementById('stories-container');
+    try {
+      const res = await fetch('content/testimonials.json?_=' + Date.now());
+      const data = await res.json();
+      const stories = data.stories || [];
+      if (!stories.length){
+        container.innerHTML = '<p style="text-align:center; color:var(--ink-70); padding:40px 0;">Pronto compartiremos más historias.</p>';
+        return;
+      }
+      container.innerHTML = stories.map(s => `
+        <div class="story-card">
+          <div class="story-photo" style="background-image:url('${s.photo}'); background-size:cover; background-position:center;">
+            <span class="tag">${s.location}</span>
+          </div>
+          <div class="story-content">
+            <span class="loc-tag">📍 ${s.location}</span>
+            <h3>${s.name}</h3>
+            <p>${s.story}</p>
+            <div class="quote">"${s.quote}"</div>
+          </div>
+        </div>
+      `).join('');
+    } catch(e){
+      console.error('Error cargando historias:', e);
+      container.innerHTML = '<p style="text-align:center; color:var(--ink-70); padding:40px 0;">No se pudieron cargar las historias.</p>';
+    }
+  }
+  loadStories();
+</script>
+
+<script>
   // mobileNavScript
   document.querySelectorAll('.navToggle').forEach(function(btn){
     btn.addEventListener('click', function(){
@@ -172,6 +124,13 @@
       btn.classList.toggle('active');
     });
   });
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function(user){});
+    window.netlifyIdentity.on("login", function(){ document.location.href = "/admin/"; });
+  }
 </script>
 </body>
 </html>

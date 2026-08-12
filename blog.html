@@ -41,102 +41,32 @@
 <section class="blog-full">
   <div class="wrap">
 
-    <div class="blog-featured">
-      <div class="bf-img"><span class="cat">Destacado</span></div>
-      <div class="bf-body">
-        <span class="date">10 Ago 2026</span>
-        <h2>¿Cuánto dinero necesito para dar de enganche en Florida?</h2>
-        <p>La respuesta directa: con FHA puedes comprar con 3.5% de enganche, y programas como Florida Assist y Hometown Heroes pueden darte hasta $35,000 de ayuda adicional.</p>
-        <a href="blog-enganche-florida.html" class="btn btn-solid">Leer el artículo</a>
-      </div>
+    <div id="blog-featured-container"></div>
+
+    <div class="filter-tabs" id="blog-filter-tabs">
+      <button class="filter-tab active" data-cat="Todos">Todos</button>
+      <button class="filter-tab" data-cat="FHA & Préstamos">FHA &amp; Préstamos</button>
+      <button class="filter-tab" data-cat="Guías Paso a Paso">Guías Paso a Paso</button>
+      <button class="filter-tab" data-cat="Zonas Locales">Zonas Locales</button>
+      <button class="filter-tab" data-cat="Compradores Primerizos">Compradores Primerizos</button>
+      <button class="filter-tab" data-cat="Vendedores">Vendedores</button>
     </div>
 
-    <div class="filter-tabs">
-      <button class="filter-tab active">Todos</button>
-      <button class="filter-tab">FHA &amp; Préstamos</button>
-      <button class="filter-tab">Guías Paso a Paso</button>
-      <button class="filter-tab">Zonas Locales</button>
-      <button class="filter-tab">Compradores Primerizos</button>
-      <button class="filter-tab">Vendedores</button>
-    </div>
-
-    <div class="blog-grid">
-      <!-- PLANTILLA — copia este bloque .post-card para cada artículo nuevo -->
-      <div class="post-card">
-        <div class="post-thumb"><span class="cat">Guía</span></div>
-        <div class="post-body">
-          <span class="date">10 Ago 2026</span>
-          <h3>Los 5 pasos para comprar tu primera casa siendo inmigrante</h3>
-          <p>Sin Seguro Social, sin historial de crédito perfecto — con préstamos ITIN y crédito alternativo sí se puede.</p>
-          <a href="blog-5-pasos-inmigrante.html" class="read-more">Leer más →</a>
-        </div>
-      </div>
-      <div class="post-card">
-        <div class="post-thumb"><span class="cat">Local</span></div>
-        <div class="post-body">
-          <span class="date">10 Ago 2026</span>
-          <h3>Las mejores zonas SIN HOA para familias en West Palm Beach</h3>
-          <p>De 33415 a The Acreage — dónde buscar si no quieres pagar cuota de asociación cada mes.</p>
-          <a href="blog-zonas-sin-hoa.html" class="read-more">Leer más →</a>
-        </div>
-      </div>
-      <div class="post-card">
-        <div class="post-thumb"><span class="cat">FHA</span></div>
-        <div class="post-body">
-          <span class="date">Próximamente</span>
-          <h3>FHA vs. Convencional: ¿cuál me conviene para mi primera casa?</h3>
-          <p>La diferencia explicada en español simple, con ejemplos reales.</p>
-          <a href="#" class="read-more">Leer más →</a>
-        </div>
-      </div>
-      <div class="post-card">
-        <div class="post-thumb"><span class="cat">Guía</span></div>
-        <div class="post-body">
-          <span class="date">Próximamente</span>
-          <h3>¿Qué documentos necesito si soy trabajador independiente?</h3>
-          <p>Cómo calificar para un préstamo aunque no tengas W-2.</p>
-          <a href="#" class="read-more">Leer más →</a>
-        </div>
-      </div>
-      <div class="post-card">
-        <div class="post-thumb"><span class="cat">Local</span></div>
-        <div class="post-body">
-          <span class="date">Próximamente</span>
-          <h3>Wellington vs. Lake Worth: ¿dónde comprar según tu familia?</h3>
-          <p>Comparación honesta de escuelas, precios y estilo de vida.</p>
-          <a href="#" class="read-more">Leer más →</a>
-        </div>
-      </div>
-      <div class="post-card">
-        <div class="post-thumb"><span class="cat">Primerizos</span></div>
-        <div class="post-body">
-          <span class="date">Próximamente</span>
-          <h3>Los errores más comunes al comprar tu primera casa</h3>
-          <p>Lo que veo repetirse una y otra vez — y cómo evitarlo.</p>
-          <a href="#" class="read-more">Leer más →</a>
-        </div>
-      </div>
-      <div class="post-card">
-        <div class="post-thumb"><span class="cat">Vendedores</span></div>
-        <div class="post-body">
-          <span class="date">Próximamente</span>
-          <h3>¿Cuánto vale realmente tu casa en Palm Beach County?</h3>
-          <p>Cómo se calcula el precio de venta real — más allá de lo que dice Zillow.</p>
-          <a href="#" class="read-more">Leer más →</a>
-        </div>
-      </div>
-      <div class="post-card">
-        <div class="post-thumb"><span class="cat">Vendedores</span></div>
-        <div class="post-body">
-          <span class="date">Próximamente</span>
-          <h3>5 cosas que debes arreglar antes de poner tu casa en venta</h3>
-          <p>Pequeñas inversiones que sí suben el precio final — y cuáles no valen la pena.</p>
-          <a href="#" class="read-more">Leer más →</a>
-        </div>
-      </div>
+    <div class="blog-grid" id="blog-grid">
+      <p style="text-align:center; color:var(--ink-70); padding:40px 0;">Cargando artículos...</p>
     </div>
   </div>
 </section>
+
+<!-- Modal para artículos sin página propia -->
+<div id="post-modal" style="display:none; position:fixed; inset:0; background:rgba(10,22,40,.92); z-index:200; align-items:center; justify-content:center; padding:24px;">
+  <div style="background:#fff; max-width:640px; width:100%; max-height:85vh; overflow-y:auto; padding:40px; position:relative;">
+    <button onclick="document.getElementById('post-modal').style.display='none';" style="position:absolute; top:16px; right:20px; background:none; border:none; font-size:1.8rem; cursor:pointer; color:var(--navy);">&times;</button>
+    <span class="mono" id="modal-cat" style="color:var(--gold); display:block; margin-bottom:10px;"></span>
+    <h2 id="modal-title" style="font-size:1.6rem; margin-bottom:16px;"></h2>
+    <div id="modal-body" style="color:var(--ink-70); line-height:1.75; white-space:pre-line;"></div>
+  </div>
+</div>
 
 <footer>
   <div class="wrap">
@@ -168,6 +98,96 @@
 </footer>
 
 <script>
+  let allPosts = [];
+
+  function fmtDate(iso){
+    const d = new Date(iso);
+    const meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+    return d.getDate() + ' ' + meses[d.getMonth()] + ' ' + d.getFullYear();
+  }
+
+  function openPostModal(post){
+    if (post.url){ window.location.href = post.url; return; }
+    document.getElementById('modal-cat').textContent = post.category || '';
+    document.getElementById('modal-title').textContent = post.title;
+    document.getElementById('modal-body').textContent = post.body && post.body.trim() ? post.body : post.excerpt;
+    document.getElementById('post-modal').style.display = 'flex';
+  }
+  window.openPostModal = openPostModal;
+
+  function renderPosts(category){
+    const grid = document.getElementById('blog-grid');
+    const featured = document.getElementById('blog-featured-container');
+    let posts = [...allPosts].sort((a,b) => new Date(b.date) - new Date(a.date));
+
+    // Featured = most recent post overall, always shown regardless of filter
+    if (posts.length){
+      const f = posts[0];
+      featured.innerHTML = `
+        <div class="blog-featured">
+          <div class="bf-img">${f.image ? `<img src="${f.image}" style="width:100%;height:100%;object-fit:cover;" alt="${f.title}">` : ''}<span class="cat">Destacado</span></div>
+          <div class="bf-body">
+            <span class="date">${fmtDate(f.date)}</span>
+            <h2>${f.title}</h2>
+            <p>${f.excerpt || ''}</p>
+            <a href="javascript:void(0)" onclick='openPostModal(${JSON.stringify(f).replace(/'/g,"&apos;")})' class="btn btn-solid">Leer el artículo</a>
+          </div>
+        </div>`;
+    } else {
+      featured.innerHTML = '';
+    }
+
+    let filtered = posts;
+    if (category && category !== 'Todos'){
+      filtered = posts.filter(p => p.category === category);
+    }
+
+    if (!filtered.length){
+      grid.innerHTML = '<p style="text-align:center; color:var(--ink-70); padding:40px 0; grid-column:1/-1;">No hay artículos en esta categoría todavía.</p>';
+      return;
+    }
+
+    grid.innerHTML = filtered.map(p => `
+      <div class="post-card">
+        <div class="post-thumb">${p.image ? `<img src="${p.image}" style="width:100%;height:100%;object-fit:cover;" alt="${p.title}">` : ''}<span class="cat">${p.category || 'Guía'}</span></div>
+        <div class="post-body">
+          <span class="date">${fmtDate(p.date)}</span>
+          <h3>${p.title}</h3>
+          <p>${p.excerpt || ''}</p>
+          <a href="javascript:void(0)" onclick='openPostModal(${JSON.stringify(p).replace(/'/g,"&apos;")})' class="read-more">Leer más →</a>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  async function loadBlog(){
+    try {
+      const res = await fetch('content/blog.json?_=' + Date.now());
+      const data = await res.json();
+      allPosts = data.posts || [];
+      renderPosts('Todos');
+    } catch(e){
+      console.error('Error cargando blog:', e);
+      document.getElementById('blog-grid').innerHTML = '<p style="text-align:center; color:var(--ink-70); padding:40px 0;">No se pudieron cargar los artículos.</p>';
+    }
+  }
+
+  document.querySelectorAll('#blog-filter-tabs .filter-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#blog-filter-tabs .filter-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderPosts(btn.dataset.cat);
+    });
+  });
+
+  document.getElementById('post-modal').addEventListener('click', function(e){
+    if (e.target === this) this.style.display = 'none';
+  });
+
+  loadBlog();
+</script>
+
+<script>
   // mobileNavScript
   document.querySelectorAll('.navToggle').forEach(function(btn){
     btn.addEventListener('click', function(){
@@ -176,6 +196,13 @@
       btn.classList.toggle('active');
     });
   });
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function(user){});
+    window.netlifyIdentity.on("login", function(){ document.location.href = "/admin/"; });
+  }
 </script>
 </body>
 </html>

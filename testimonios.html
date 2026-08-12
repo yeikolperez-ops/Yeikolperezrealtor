@@ -140,39 +140,18 @@
       </div>
     </div>
 
-    <div class="reviews-summary">
+    <div class="reviews-summary" id="reviews-summary">
       <div>
-        <div class="big-rating">4.8</div>
+        <div class="big-rating" id="rv-rating">—</div>
         <div class="stars">★★★★★</div>
-        <div class="rcount">10 reseñas verificadas en Google</div>
+        <div class="rcount" id="rv-count">Cargando reseñas...</div>
       </div>
       <div class="review-sources">
         <div class="source-pill">★ Google Reviews</div>
       </div>
     </div>
 
-    <div class="review-grid">
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>"The Best Realtor ever."</p>
-        <div class="who"><span class="rname">Cliente verificado</span><span class="rsrc">Google</span></div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>"Nunca pensé que encontraría tanta experiencia y un deseo genuino de ayudar en alguien tan joven. A pesar de su edad, Yeikol ha aprovechado el tiempo y adquirido un conocimiento que lo ha convertido en un experto. Nuestra experiencia comprando con él fue la mejor; superó nuestras expectativas."</p>
-        <div class="who"><span class="rname">Cliente verificado</span><span class="rsrc">Google</span></div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>"Yeikol fue muy amable y atento desde el principio. Siempre estuvo disponible para ayudar e hizo el proceso mucho más fácil. Lo recomiendo ampliamente."</p>
-        <div class="who"><span class="rname">Cliente verificado</span><span class="rsrc">Google</span></div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>"Mi experiencia fue realmente buena, Yeikol fue súper paciente, atento a cualquier duda que tuvimos, siempre explicando todo. Fue una experiencia maravillosa, lo recomiendo 100%."</p>
-        <div class="who"><span class="rname">Cliente verificado</span><span class="rsrc">Google</span></div>
-      </div>
-    </div>
+    <div class="review-grid" id="review-grid"></div>
   </div>
 </section>
 
@@ -219,6 +198,29 @@
 
 <script async src="https://www.tiktok.com/embed.js"></script>
 <script>
+  async function loadReviews(){
+    try {
+      const res = await fetch('content/reviews.json?_=' + Date.now());
+      const data = await res.json();
+      document.getElementById('rv-rating').textContent = data.rating || '—';
+      document.getElementById('rv-count').textContent = (data.count || 0) + ' reseñas verificadas en Google';
+      const grid = document.getElementById('review-grid');
+      const items = data.items || [];
+      grid.innerHTML = items.map(r => `
+        <div class="review-card">
+          <div class="stars">${'★'.repeat(r.stars || 5)}</div>
+          <p>"${r.text}"</p>
+          <div class="who"><span class="rname">${r.name || 'Cliente verificado'}</span><span class="rsrc">${r.source || 'Google'}</span></div>
+        </div>
+      `).join('');
+    } catch(e){
+      console.error('Error cargando reseñas:', e);
+      document.getElementById('rv-count').textContent = 'No se pudieron cargar las reseñas.';
+    }
+  }
+  loadReviews();
+</script>
+<script>
   // mobileNavScript
   document.querySelectorAll('.navToggle').forEach(function(btn){
     btn.addEventListener('click', function(){
@@ -227,6 +229,13 @@
       btn.classList.toggle('active');
     });
   });
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function(user){});
+    window.netlifyIdentity.on("login", function(){ document.location.href = "/admin/"; });
+  }
 </script>
 </body>
 </html>
