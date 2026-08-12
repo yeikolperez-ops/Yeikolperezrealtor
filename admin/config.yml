@@ -54,25 +54,21 @@ collections:
   # ═══════════════ BLOG ═══════════════
   - name: "blog"
     label: "Blog"
-    files:
-      - file: "content/blog.json"
-        label: "Artículos del Blog"
-        name: "blog"
-        fields:
-          - label: "Artículos"
-            name: "posts"
-            widget: "list"
-            summary: "{{fields.title}}"
-            fields:
-              - {label: "Título", name: "title", widget: "string"}
-              - label: "Categoría"
-                name: "category"
-                widget: "select"
-                options: ["FHA & Préstamos", "Guías Paso a Paso", "Zonas Locales", "Compradores Primerizos", "Vendedores", "Destacado"]
-              - {label: "Resumen corto", name: "excerpt", widget: "text"}
-              - {label: "Contenido completo", name: "body", widget: "markdown", required: false}
-              - {label: "Imagen de portada", name: "image", widget: "image", required: false}
-              - {label: "Fecha", name: "date", widget: "datetime", format: "DD/MM/YYYY"}
+    folder: "eleventy-src/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post.njk"}
+      - {label: "Permalink", name: "permalink", widget: "hidden", default: "blog-{{ page.fileSlug }}.html"}
+      - {label: "Título", name: "title", widget: "string"}
+      - label: "Categoría"
+        name: "category"
+        widget: "select"
+        options: ["FHA & Préstamos", "Guías Paso a Paso", "Zonas Locales", "Compradores Primerizos", "Vendedores", "Destacado"]
+      - {label: "Resumen corto (aparece en la tarjeta)", name: "excerpt", widget: "text"}
+      - {label: "Imagen de portada", name: "image", widget: "image", required: false}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Contenido completo del artículo", name: "body", widget: "markdown"}
 
   # ═══════════════ TESTIMONIOS / NUESTROS CLIENTES ═══════════════
   - name: "testimonials"
