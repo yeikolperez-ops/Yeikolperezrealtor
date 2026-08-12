@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }} | Yeikol Perez</title>
+<meta name="description" content="{{ excerpt }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .article-body{max-width:720px; margin:0 auto; padding:80px 28px;}
+  .article-body h2{font-size:1.5rem; margin:36px 0 14px; font-family:'Montserrat',sans-serif; font-weight:800; color:var(--navy);}
+  .article-body h3{font-size:1.2rem; margin:28px 0 12px; font-family:'Montserrat',sans-serif; font-weight:700; color:var(--navy);}
+  .article-body p{color:var(--ink-70); font-size:1.02rem; line-height:1.75; margin-bottom:18px;}
+  .article-body ul, .article-body ol{margin:0 0 20px 22px; color:var(--ink-70); line-height:1.75;}
+  .article-body li{margin-bottom:10px;}
+  .article-body strong{color:var(--navy);}
+  .article-body img{max-width:100%; margin:24px 0;}
+  .article-cover{width:100%; max-height:420px; object-fit:cover; margin-bottom:0;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="brand">YEIKOL <span>PEREZ</span></a>
+    <div class="navlinks">
+      <a href="index.html#sobre-mi">Sobre Mí</a>
+      <a href="listings.html">Propiedades en Venta</a>
+      <a href="videos.html">Videos de Casas</a>
+      <a href="testimonios.html">Testimonios &amp; Reviews</a>
+      <a href="clientes.html">Nuestros Clientes</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contacto" class="navcta">561-698-9257</a>
+    </div>
+    <button class="navToggle" aria-label="Menú"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Inicio</a> / <a href="blog.html">Blog</a> / {{ title }}</div>
+    <span class="mono">{{ category }}</span>
+    <h1>{{ title }}</h1>
+    <p>{{ excerpt }}</p>
+  </div>
+</section>
+
+{% if image %}<img class="article-cover" src="{{ image }}" alt="{{ title }}">{% endif %}
+
+<article class="article-body">
+  {{ content | safe }}
+  <a href="index.html#contacto" class="btn btn-solid">Agendar Consulta Gratis</a>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">YEIKOL <span>PEREZ</span></div>
+      <div class="foot-links">
+        <a href="index.html">Inicio</a>
+        <a href="blog.html">Blog</a>
+        <a href="listings.html">Propiedades</a>
+        <a href="https://www.tiktok.com/@yeikolpalmbechrealtor" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.instagram.com/realtoryeikol" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@YeikolPalmBeachRealtor" target="_blank" rel="noopener">YouTube</a>
+        <a href="tel:+15616989257">561-698-9257</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="fair-housing">
+        <div class="fh-icon">⌂</div>
+        <span>Equal Housing Opportunity. Yeikol Perez es agente afiliado a Partnership Realty Inc. Cada oficina es de propiedad y operación independiente.</span>
+      </div>
+      <span>Se habla español / English spoken</span>
+    </div>
+    <div class="legal-line">
+      © 2026 Yeikol Perez · Partnership Realty Inc. · 1663 S Congress Ave, West Palm Beach, FL 33406 · 561-698-9257. La información en este artículo es de carácter general e informativo, no constituye asesoría financiera, legal o migratoria.
+    </div>
+  </div>
+</footer>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function(user){});
+    window.netlifyIdentity.on("login", function(){ document.location.href = "/admin/"; });
+  }
+</script>
+<script>
+  document.querySelectorAll('.navToggle').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelector('.navlinks').classList.toggle('open');
+      btn.classList.toggle('active');
+    });
+  });
+</script>
+</body>
+</html>

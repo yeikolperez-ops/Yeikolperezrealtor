@@ -1,0 +1,18 @@
+---
+permalink: content/blog.json
+eleventyExcludeFromCollections: true
+---
+{
+  "posts": [
+{%- for post in collections.blogPosts %}
+    {
+      "title": {{ post.data.title | jsonify | safe }},
+      "category": {{ post.data.category | jsonify | safe }},
+      "excerpt": {{ post.data.excerpt | jsonify | safe }},
+      "image": {{ post.data.image | jsonify | safe }},
+      "url": {{ post.url | jsonify | safe }},
+      "date": {{ post.date | jsonify | safe }}
+    }{% if not loop.last %},{% endif %}
+{%- endfor %}
+  ]
+}
