@@ -7,6 +7,11 @@ public_folder: "/assets/uploads"
 
 locale: "es"
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
 collections:
 
   # ═══════════════ PROPIEDADES EN VENTA ═══════════════
