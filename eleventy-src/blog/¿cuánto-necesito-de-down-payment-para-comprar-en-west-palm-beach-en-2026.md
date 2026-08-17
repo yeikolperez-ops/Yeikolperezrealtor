@@ -6,7 +6,7 @@ category: FHA & Préstamos
 excerpt: Con FHA puedes comprar en West Palm Beach con solo 3.5% de enganche —
   te explico el número real y los programas de asistencia que existen en Palm
   Beach County.
-image: /assets/uploads/enganche-comparativo-wpb.png
+image: ""
 date: 2026-08-17T16:47:00.000-04:00
 ---
 Si llevas tiempo preguntándote si comprar casa en West Palm Beach está fuera de tu alcance, quiero darte un número real antes de que sigas leyendo: **con un préstamo FHA, puedes entrar a tu casa con tan solo 3.5% de enganche.** Y en muchos casos, ni siquiera necesitas tener ese dinero completo ahorrado. Vamos por partes.
