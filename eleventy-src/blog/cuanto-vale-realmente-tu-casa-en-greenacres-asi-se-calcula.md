@@ -100,7 +100,7 @@ Son dos cosas distintas. El CMA lo hace tu Realtor para decidir a qué precio sa
 
 Pídeme un análisis de valor gratis y sin compromiso. Reviso las ventas reales de tu comunidad, veo tu casa en persona y te doy un rango de precio realista, con el neto estimado que te quedaría después de closing costs.
 
-Llámame o escríbeme al **561-698-9257**, o agenda en **yeikolperezrealtor.com**. Atiendo en español y en inglés.
+Llámame o escríbeme al **(561) 429-9853**, o agenda en **yeikolperezrealtor.com**. Atiendo en español y en inglés.
 
 **Yeikol Perez** es Realtor® bilingüe (español/English) en Partnership Realty Inc., licencia de Florida #3630532, especialista en compradores primerizos y vendedores de casa en Palm Beach County. Síguelo en @yeikolpalmbeachrealtor.
 

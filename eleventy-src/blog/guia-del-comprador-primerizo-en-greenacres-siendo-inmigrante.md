@@ -101,6 +101,6 @@ Traducido: los precios subieron, pero el comprador tiene tiempo para comparar y 
 
 Depende de tres cosas: tu presupuesto, las escuelas que buscas y si quieres o no HOA. Yo soy Yeikol Perez, Realtor bilingüe (español/English) con Partnership Realty Inc., y ayudo a familias a comparar estas zonas con números reales antes de hacer una oferta.
 
-Llámame o escríbeme al **561-698-9257**, o agenda una llamada en calendly.com/yeikolperez27. La consulta es gratis y en español.
+Llámame o escríbeme al **(561) 429-9853**, o agenda una llamada en calendly.com/yeikolperez27. La consulta es gratis y en español.
 
 **Yeikol Perez** · Realtor® bilingüe (español/English) · Partnership Realty Inc. · Licencia de Florida #3630532 Especialista en compradores primerizos y vendedores de casa en Palm Beach County. Instagram: @yeikolpalmbeachrealtor

@@ -91,4 +91,4 @@ En Greenacres todavía se encuentran casas y townhomes en rangos accesibles para
 
 Si quieres que te ayude a buscar casas dentro de la zona escolar que prefieres, escríbeme o agenda una llamada gratis. Te explico todo en español, sin presión y paso a paso.
 
-**Yeikol Perez** es Realtor® bilingüe con **Partnership Realty Inc.** (Licencia de Florida #3630532), especialista en compradores primerizos y vendedores de casa en Palm Beach County. Sígueme en **@yeikolpalmbeachrealtor** · 561-698-9257 · yeikolperezrealtor.com
+**Yeikol Perez** es Realtor® bilingüe con **Partnership Realty Inc.** (Licencia de Florida #3630532), especialista en compradores primerizos y vendedores de casa en Palm Beach County. Sígueme en **@yeikolpalmbeachrealtor** · (561) 429-9853 · yeikolperezrealtor.com
