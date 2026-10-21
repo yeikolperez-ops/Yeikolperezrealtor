@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=aaf1cde7-f9cc-407c-a86a-c7ea923181b6
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía para Primeros Compradores — Palm Beach County</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --cream: #faf7f2;
+    --warm-white: #ffffff;
+    --text-dark: #1a1a2e;
+    --text-mid: #4a4a6a;
+    --text-light: #8888aa;
+    --accent-green: #1a7a4a;
+    --accent-red: #c0392b;
+    --border: rgba(201,168,76,0.2);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.7;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    color: white;
+    padding: 60px 40px 50px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: -40px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.1) 0%, transparent 70%);
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(201,168,76,0.2);
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--gold-light);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero h1 span { color: var(--gold); }
+  .hero p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.7);
+    max-width: 480px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+  }
+  .agent-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 12px;
+    padding: 14px 18px;
+    position: relative;
+    z-index: 1;
+    max-width: 320px;
+  }
+  .agent-avatar {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 700; color: var(--navy);
+    flex-shrink: 0;
+  }
+  .agent-info { flex: 1; }
+  .agent-name { font-size: 14px; font-weight: 600; color: white; }
+  .agent-title { font-size: 12px; color: rgba(255,255,255,0.5); }
+  .agent-contact { font-size: 12px; color: var(--gold); font-weight: 500; margin-top: 2px; }
+
+  /* STATS BAR */
+  .stats-bar {
+    background: var(--gold);
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .stat { text-align: center; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--navy); }
+  .stat-label { font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: rgba(10,22,40,0.65); }
+
+  /* CONTENT */
+  .container { max-width: 700px; margin: 0 auto; padding: 0 24px; }
+
+  .section {
+    padding: 44px 0 0;
+  }
+
+  .section-number {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .num-circle {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700;
+    flex-shrink: 0;
+  }
+  .section-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 14px;
+    line-height: 1.25;
+  }
+
+  p { font-size: 15px; color: var(--text-mid); margin-bottom: 14px; }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    margin: 40px 0 0;
+  }
+
+  /* HIGHLIGHT BOX */
+  .highlight {
+    background: var(--navy);
+    color: white;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .highlight::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(to right, var(--gold), var(--gold-light));
+  }
+  .highlight-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .highlight p { color: rgba(255,255,255,0.8); font-size: 14px; margin: 0; }
+  .highlight strong { color: var(--gold-light); }
+
+  /* REQUIREMENT CARDS */
+  .req-grid { display: flex; flex-direction: column; gap: 10px; margin: 16px 0; }
+  .req-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .req-icon {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--navy), #1a2d5a);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .req-content { flex: 1; }
+  .req-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-light); margin-bottom: 3px; }
+  .req-value { font-size: 15px; font-weight: 600; color: var(--navy); }
+  .req-note { font-size: 12px; color: var(--text-light); margin-top: 2px; }
+
+  /* PROGRAM CARDS */
+  .program-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px 24px;
+    margin: 12px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .program-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--gold);
+  }
+  .program-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .program-name { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .program-desc { font-size: 14px; color: var(--text-mid); margin: 0; }
+  .program-tag {
+    display: inline-block;
+    background: rgba(26,122,74,0.1);
+    color: var(--accent-green);
+    border-radius: 6px;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  /* STEPS */
+  .steps { display: flex; flex-direction: column; gap: 0; margin: 16px 0; }
+  .step {
+    display: flex;
+    gap: 18px;
+    position: relative;
+  }
+  .step-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .step-dot {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--navy);
+    border: 3px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700; color: var(--gold);
+    flex-shrink: 0;
+    z-index: 1;
+  }
+  .step-line {
+    width: 2px;
+    flex: 1;
+    background: linear-gradient(to bottom, var(--gold), rgba(201,168,76,0.1));
+    margin: 4px 0;
+    min-height: 30px;
+  }
+  .step:last-child .step-line { display: none; }
+  .step-content { padding-bottom: 28px; flex: 1; padding-top: 6px; }
+  .step-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .step-desc { font-size: 13px; color: var(--text-mid); margin: 0; }
+  .step-tip {
+    background: rgba(201,168,76,0.08);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0;
+    padding: 8px 12px;
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text-mid);
+  }
+  .step-tip strong { color: var(--navy); }
+
+  /* COST TABLE */
+  .cost-table { margin: 16px 0; }
+  .cost-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+    background: white;
+  }
+  .cost-row:first-child { border-radius: 12px 12px 0 0; }
+  .cost-row:last-child { border-radius: 0 0 12px 12px; border-bottom: none; }
+  .cost-row.total {
+    background: var(--navy);
+    border-radius: 0 0 12px 12px;
+    border-bottom: none;
+  }
+  .cost-label { font-size: 13px; color: var(--text-mid); }
+  .cost-row.total .cost-label { color: rgba(255,255,255,0.7); font-weight: 500; }
+  .cost-value { font-size: 14px; font-weight: 700; color: var(--navy); }
+  .cost-row.total .cost-value { color: var(--gold); font-size: 16px; }
+  .cost-note { font-size: 11px; color: var(--text-light); font-weight: 400; margin-left: 6px; }
+
+  /* MYTHS */
+  .myth-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .myth-side { }
+  .myth-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
+  .myth-label.red { color: var(--accent-red); }
+  .myth-label.green { color: var(--accent-green); }
+  .myth-text { font-size: 13px; line-height: 1.5; }
+  .myth-text.red { color: #8b2020; }
+  .myth-text.green { color: #1a4a30; font-weight: 500; }
+  .myth-divider { width: 1px; background: var(--border); grid-row: 1; grid-column: auto; display: none; }
+
+  /* CTA */
+  .cta-section {
+    background: var(--navy);
+    margin: 44px -24px 0;
+    padding: 44px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+  .cta-section h2 { color: white; font-size: 28px; margin-bottom: 12px; }
+  .cta-section p { color: rgba(255,255,255,0.65); max-width: 400px; margin: 0 auto 28px; }
+  .cta-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    margin: 6px;
+    transition: all 0.2s;
+  }
+  .cta-btn:hover { background: var(--gold-light); }
+  .cta-btn.outline {
+    background: transparent;
+    border: 2px solid rgba(201,168,76,0.4);
+    color: var(--gold);
+  }
+  .cta-btn.outline:hover { border-color: var(--gold); }
+  .cta-phone {
+    margin-top: 20px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+  }
+  .cta-phone strong { color: var(--gold); }
+
+  /* FOOTER */
+  .footer {
+    padding: 24px 40px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-light);
+    border-top: 1px solid var(--border);
+  }
+
+  /* CHECKLIST */
+  .checklist { margin: 14px 0; }
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+  }
+  .check-icon { color: var(--accent-green); font-size: 15px; margin-top: 1px; flex-shrink: 0; }
+  .check-text { font-size: 14px; color: var(--text-mid); }
+  .check-text strong { color: var(--navy); }
+
+  /* IMPORTANT NOTE */
+  .note-box {
+    background: rgba(192,57,43,0.06);
+    border: 1px solid rgba(192,57,43,0.2);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 13px;
+    color: #7a2020;
+  }
+  .note-box strong { color: var(--accent-red); }
+
+  @media (max-width: 500px) {
+    .hero { padding: 44px 24px 40px; }
+    .hero h1 { font-size: 30px; }
+    .stats-bar { padding: 16px 20px; gap: 16px; }
+    .cta-section { padding: 40px 24px; }
+    .myth-card { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="badge">✦ Guía Exclusiva</div>
+  <h1>Tu Primera Casa en<br><span>Palm Beach County</span><br>— La Guía Completa</h1>
+  <p>Todo lo que necesitas saber para comprar tu primera casa aquí en el condado. Números reales, programas reales, pasos reales.</p>
+  <div class="agent-card">
+    <div class="agent-avatar">Y</div>
+    <div class="agent-info">
+      <div class="agent-name">Yeikol Perez</div>
+      <div class="agent-title">Agente de Bienes Raíces · Palm Beach County</div>
+      <div class="agent-contact">📱 (561) 429-9853</div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-num">$0</div>
+    <div class="stat-label">Down payment posible</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">$100K</div>
+    <div class="stat-label">Asistencia máx. condado</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">$667K</div>
+    <div class="stat-label">Límite FHA Palm Beach</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">3.5%</div>
+    <div class="stat-label">Down payment con FHA</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- SECTION 1: LA VERDAD -->
+  <div class="section">
+    <div class="section-number">
+      <div class="num-circle">1</div>
+      <span class="section-tag">El punto de partida</span>
+    </div>
+    <h2>Lo que nadie te dice cuando quieres comprar</h2>
+    <p>La mayoría de las personas que quieren comprar su primera casa en Palm Beach County creen que necesitan decenas de miles de dólares ahorrados antes de siquiera llamar a un agente. Eso no es verdad.</p>
+    <p>Lo que sí necesitas es <strong>información correcta y el equipo correcto</strong>. Esta guía te da exactamente eso — sin rodeos, con números reales del condado.</p>
+
+    <div class="highlight">
+      <div class="highlight-title">⚡ Dato clave</div>
+      <p>En Palm Beach County existen programas de asistencia que te pueden dar hasta <strong>$100,000</strong> para tu down payment y closing costs — con 0% de interés y sin pagos mensuales. Si calificas y tienes al menos $10,000 ahorrados, el condado puede <strong>igualar tu dinero dólar por dólar hasta $50,000</strong> con el nuevo Homebuyer Match Pilot Program.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 2: REQUISITOS -->
+  <div class="section">
+    <div class="section-number">
+      <div class="num-circle">2</div>
+      <span class="section-tag">¿Califico?</span>
+    </div>
+    <h2>Los requisitos básicos para comprar con FHA</h2>
+    <p>El préstamo FHA es el más usado por primeros compradores en Florida. Estos son los números que necesitas tener en orden:</p>
+
+    <div class="req-grid">
+      <div class="req-card">
+        <div class="req-icon">💳</div>
+        <div class="req-content">
+          <div class="req-label">Credit Score</div>
+          <div class="req-value">580+ para 3.5% de down payment</div>
+          <div class="req-note">Con 500–579 calificas con 10% de down. La mayoría de programas de asistencia piden 640+.</div>
+        </div>
+      </div>
+      <div class="req-card">
+        <div class="req-icon">🏦</div>
+        <div class="req-content">
+          <div class="req-label">Down Payment</div>
+          <div class="req-value">Mínimo 3.5% del precio de la casa</div>
+          <div class="req-note">En una casa de $420,000 = $14,700. Los programas de asistencia pueden cubrir esto.</div>
+        </div>
+      </div>
+      <div class="req-card">
+        <div class="req-icon">💼</div>
+        <div class="req-content">
+          <div class="req-label">Historial de empleo</div>
+          <div class="req-value">2 años de empleo consistente</div>
+          <div class="req-note">No tiene que ser el mismo empleador, pero sí el mismo campo de trabajo.</div>
+        </div>
+      </div>
+      <div class="req-card">
+        <div class="req-icon">📊</div>
+        <div class="req-content">
+          <div class="req-label">Deuda vs. Ingreso (DTI)</div>
+          <div class="req-value">Máximo 43% de tu ingreso mensual</div>
+          <div class="req-note">Suma todas tus deudas mensuales + tu hipoteca. No debe pasar el 43% de lo que ganas.</div>
+        </div>
+      </div>
+      <div class="req-card">
+        <div class="req-icon">🏠</div>
+        <div class="req-content">
+          <div class="req-label">Límite del préstamo FHA en Palm Beach</div>
+          <div class="req-value">Hasta $667,000</div>
+          <div class="req-note">Palm Beach County es zona de alto costo, por eso el límite es mayor al promedio nacional.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note-box">
+      <strong>Importante:</strong> Para los programas de asistencia del condado debes ser "primer comprador" — lo que significa que no has tenido una casa a tu nombre en los últimos 3 años. Si vendiste hace 4 años, ¡calificas!
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 3: PROGRAMAS -->
+  <div class="section">
+    <div class="section-number">
+      <div class="num-circle">3</div>
+      <span class="section-tag">Dinero disponible para ti</span>
+    </div>
+    <h2>Los programas de asistencia en Palm Beach County</h2>
+    <p>Estos son los programas reales disponibles. Muchos se pueden combinar ("stackear") para maximizar la asistencia que recibes.</p>
+
+    <div class="program-card">
+      <div class="program-name">🏆 Programa SHIP — Condado de Palm Beach</div>
+      <div class="program-amount">Hasta $100,000</div>
+      <div class="program-desc">Préstamo al 0% de interés, diferido por 30 años. Se perdona al final del término si viviste en la casa. Cubre down payment y closing costs. Para ingresos moderados (hasta $114,000/año para 1 persona).</div>
+      <span class="program-tag">✓ 0% interés · Sin pagos mensuales · Perdonable</span>
+    </div>
+
+    <div class="program-card">
+      <div class="program-name">🏆 Programa HOME — Condado de Palm Beach</div>
+      <div class="program-amount">Hasta $100,000</div>
+      <div class="program-desc">Similar al SHIP pero para ingresos más bajos (hasta $65,000/año para 1 persona). Fondos federales. Aplica si tu ingreso es menor.</div>
+      <span class="program-tag">✓ 0% interés · Sin pagos mensuales · Perdonable</span>
+    </div>
+
+    <div class="program-card">
+      <div class="program-name">⭐ Homebuyer Match Pilot Program — NUEVO</div>
+      <div class="program-amount">Hasta $50,000</div>
+      <div class="program-desc">El condado iguala tu dinero dólar por dólar. Si tienes $10,000+ ahorrados, el condado pone hasta $50,000 más. Sistema de lotería — los fondos se agotan rápido. $2 millones disponibles en la primera fase.</div>
+      <span class="program-tag">✓ Nuevo · Lotería · Fondos limitados</span>
+    </div>
+
+    <div class="program-card">
+      <div class="program-name">🌴 Florida Hometown Heroes</div>
+      <div class="program-amount">Hasta $35,000</div>
+      <div class="program-desc">Para trabajadores de Florida (enfermeros, maestros, policías, militares, y más). Sin requisito de ser primer comprador en zonas específicas. Se combina con FHA.</div>
+      <span class="program-tag">✓ Estatal · Combinable con SHIP/HOME</span>
+    </div>
+
+    <div class="program-card">
+      <div class="program-name">🏙️ West Palm Beach — Programa de Ciudad</div>
+      <div class="program-amount">Hasta $100,000</div>
+      <div class="program-desc">Si compras dentro de los límites de la ciudad de West Palm Beach. Préstamo al 0%, perdonable a los 30 años. Requiere dos sesiones de orientación y curso HUD.</div>
+      <span class="program-tag">✓ Solo dentro de West Palm Beach</span>
+    </div>
+
+    <div class="highlight">
+      <div class="highlight-title">💡 Cómo se puede combinar</div>
+      <p>Ejemplo real: Compras una casa de <strong>$420,000</strong> en Palm Beach County.<br><br>
+      SHIP del condado: <strong>$40,000</strong><br>
+      Hometown Heroes: <strong>$35,000</strong><br>
+      Tu dinero: <strong>$14,700</strong> (3.5% FHA)<br><br>
+      Total que aportan los programas: <strong>$75,000</strong><br>
+      Total de tu bolsillo: <strong>$14,700 + closing costs</strong></p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 4: CUÁNTO NECESITAS -->
+  <div class="section">
+    <div class="section-number">
+      <div class="num-circle">4</div>
+      <span class="section-tag">Los números reales</span>
+    </div>
+    <h2>¿Cuánto dinero necesito realmente?</h2>
+    <p>Calculemos con una casa de ejemplo: <strong>$420,000 en Palm Beach County</strong>, sin programas de asistencia:</p>
+
+    <div class="cost-table">
+      <div class="cost-row">
+        <span class="cost-label">Down Payment (3.5% FHA)</span>
+        <span class="cost-value">$14,700</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-label">Closing Costs <span class="cost-note">(2–3% del precio)</span></span>
+        <span class="cost-value">$8,400–$12,600</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-label">Inspección de la casa</span>
+        <span class="cost-value">$400–$600</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-label">Reserva recomendada</span>
+        <span class="cost-value">$2,000–$3,000</span>
+      </div>
+      <div class="cost-row total">
+        <span class="cost-label">TOTAL estimado (sin asistencia)</span>
+        <span class="cost-value">$25,500–$30,900</span>
+      </div>
+    </div>
+
+    <p style="margin-top:16px; font-size:13px; color:var(--text-light);">Con los programas de asistencia del condado, este número puede reducirse significativamente. En muchos casos, nuestros clientes han cerrado con menos de $5,000 de su propio dinero.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 5: PASOS -->
+  <div class="section">
+    <div class="section-number">
+      <div class="num-circle">5</div>
+      <span class="section-tag">El proceso paso a paso</span>
+    </div>
+    <h2>Cómo es el proceso de principio a fin</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-left">
+          <div class="step-dot">1</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-title">Habla conmigo primero</div>
+          <div class="step-desc">Antes de hacer nada, tenemos una llamada de 15–20 minutos. Te explico exactamente qué programas te aplican según tu ingreso, crédito y cuándo quieres comprar.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left">
+          <div class="step-dot">2</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-title">Pre-approval con el lender correcto</div>
+          <div class="step-desc">Te conecto con un lender que conoce los programas del condado. El pre-approval te dice exactamente cuánto puedes gastar y qué necesitas para calificar.</div>
+          <div class="step-tip"><strong>Importante:</strong> No todos los lenders conocen los programas de asistencia de Palm Beach. Usar el lender equivocado puede costarte miles de dólares.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left">
+          <div class="step-dot">3</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-title">Curso de educación para compradores</div>
+          <div class="step-desc">La mayoría de programas de asistencia requieren un curso HUD-aprobado de 6–8 horas. Se puede hacer online. Es obligatorio para recibir la asistencia.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left">
+          <div class="step-dot">4</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-title">Buscamos la casa correcta</div>
+          <div class="step-desc">Con tu pre-approval y tu rango de precios claro, empezamos a ver casas. Yo te busco opciones que califiquen para los programas de asistencia que vas a usar.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left">
+          <div class="step-dot">5</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-title">Oferta, inspección y negociación</div>
+          <div class="step-desc">Cuando encontramos la casa, hacemos la oferta. Yo negocio por ti. Luego viene la inspección para verificar el estado de la propiedad.</div>
+          <div class="step-tip"><strong>Tip:</strong> El vendedor puede pagar parte de los closing costs si se negocia bien. Eso reduce aún más lo que pagas de tu bolsillo.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left">
+          <div class="step-dot">6</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-title">Cierre y llaves en mano</div>
+          <div class="step-desc">El proceso de cierre toma normalmente 30–45 días desde la oferta aceptada. Al final, firmas, pagas y recibes las llaves de tu primera casa.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 6: MITOS -->
+  <div class="section">
+    <div class="section-number">
+      <div class="num-circle">6</div>
+      <span class="section-tag">Lo que la gente cree vs. la realidad</span>
+    </div>
+    <h2>Los 4 mitos más comunes</h2>
+
+    <div class="myth-card">
+      <div class="myth-side">
+        <div class="myth-label red">❌ El mito</div>
+        <div class="myth-text red">"Necesito el 20% de down payment para comprar una casa."</div>
+      </div>
+      <div class="myth-side">
+        <div class="myth-label green">✓ La realidad</div>
+        <div class="myth-text green">Con FHA necesitas 3.5%. Y los programas de asistencia pueden cubrir eso también.</div>
+      </div>
+    </div>
+
+    <div class="myth-card">
+      <div class="myth-side">
+        <div class="myth-label red">❌ El mito</div>
+        <div class="myth-text red">"Mi crédito no está perfecto, no puedo comprar."</div>
+      </div>
+      <div class="myth-side">
+        <div class="myth-label green">✓ La realidad</div>
+        <div class="myth-text green">FHA acepta desde 580. Con un plan de 3–6 meses muchos clientes mejoran su score y califican.</div>
+      </div>
+    </div>
+
+    <div class="myth-card">
+      <div class="myth-side">
+        <div class="myth-label red">❌ El mito</div>
+        <div class="myth-text red">"Como comprador, yo pago al agente de bienes raíces."</div>
+      </div>
+      <div class="myth-side">
+        <div class="myth-label green">✓ La realidad</div>
+        <div class="myth-text green">En la gran mayoría de transacciones, la comisión del agente del comprador la paga el vendedor. Trabajar conmigo no te cuesta nada extra.</div>
+      </div>
+    </div>
+
+    <div class="myth-card">
+      <div class="myth-side">
+        <div class="myth-label red">❌ El mito</div>
+        <div class="myth-text red">"Es mejor esperar a que bajen los precios antes de comprar."</div>
+      </div>
+      <div class="myth-side">
+        <div class="myth-label green">✓ La realidad</div>
+        <div class="myth-text green">Cada mes que pagas renta es dinero que no vuelve. Y los fondos de asistencia se agotan — quien aplica primero, primero recibe.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- SECTION 7: DOCS CHECKLIST -->
+  <div class="section">
+    <div class="section-number">
+      <div class="num-circle">7</div>
+      <span class="section-tag">Prepárate ya</span>
+    </div>
+    <h2>Los documentos que vas a necesitar</h2>
+    <p>Empieza a reunir estos documentos ahora. Tenerlos listos acelera todo el proceso y te pone al frente de la fila cuando los fondos abran.</p>
+
+    <div class="checklist">
+      <div class="check-item">
+        <span class="check-icon">○</span>
+        <span class="check-text"><strong>2 últimos años de tax returns</strong> (declaración de impuestos)</span>
+      </div>
+      <div class="check-item">
+        <span class="check-icon">○</span>
+        <span class="check-text"><strong>Últimos 2 talones de pago</strong> (pay stubs)</span>
+      </div>
+      <div class="check-item">
+        <span class="check-icon">○</span>
+        <span class="check-text"><strong>Últimos 2–3 estados de cuenta bancarios</strong></span>
+      </div>
+      <div class="check-item">
+        <span class="check-icon">○</span>
+        <span class="check-text"><strong>W-2 de los últimos 2 años</strong></span>
+      </div>
+      <div class="check-item">
+        <span class="check-icon">○</span>
+        <span class="check-text"><strong>Identificación válida</strong> (pasaporte, licencia, o ID)</span>
+      </div>
+      <div class="check-item">
+        <span class="check-icon">○</span>
+        <span class="check-text"><strong>Número de seguro social</strong> (para el crédito)</span>
+      </div>
+      <div class="check-item">
+        <span class="check-icon">○</span>
+        <span class="check-text"><strong>Si eres self-employed:</strong> estados de cuenta del negocio y carta del CPA</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- CTA SECTION -->
+<div class="cta-section">
+  <h2>¿Listo para dar el primer paso?</h2>
+  <p>Tenemos una llamada de 15 minutos y te digo exactamente si calificas, cuánto necesitas y qué programas te aplican.</p>
+  <a href="tel:+15614299853" class="cta-btn">📞 Llámame ahora · (561) 429-9853</a>
+  <a href="https://calendly.com/yeikolperez27" target="_blank" class="cta-btn outline">📅 Agenda una llamada</a>
+  <div class="cta-phone">O escríbeme <strong>CASA</strong> por Instagram @realtoryeikol</div>
+</div>
+
+<div class="footer">
+  © Yeikol Perez · Agente de Bienes Raíces · Palm Beach County, FL<br>
+  Esta guía es informativa. Los programas de asistencia cambian — contáctame para verificar disponibilidad actual.
+</div>
+
+</body>
+</html>
