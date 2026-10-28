@@ -15,6 +15,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("guia-compradores");
   eleventyConfig.addPassthroughCopy("guia-programas");
   eleventyConfig.addPassthroughCopy("funnel");
+  eleventyConfig.addPassthroughCopy("casa");
   eleventyConfig.addPassthroughCopy("content/listings.json");
   eleventyConfig.addPassthroughCopy("content/testimonials.json");
   eleventyConfig.addPassthroughCopy("content/reviews.json");
