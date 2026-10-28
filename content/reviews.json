@@ -3,34 +3,64 @@
   "count": 13,
   "items": [
     {
-      "name": "Cliente verificado",
+      "name": "Selina Elias",
       "stars": 5,
-      "text": "The Best Realtor ever.",
-      "source": "Google"
+      "source": "Google",
+      "text": "Mi experiencia fue realmente buena, yeikol fue un realtor súper paciente, atento en cualquier dudas que teníamos, explicó siempre las cosas, realmente fue una experiencia maravillosa lo recomiendo 100%."
     },
     {
-      "name": "Cliente verificado",
-      "stars": 5,
-      "text": "Nunca pensé que encontraría tanta experiencia y un deseo genuino de ayudar en alguien tan joven. A pesar de su edad, Yeikol ha aprovechado el tiempo y adquirido un conocimiento que lo ha convertido en un experto. Nuestra experiencia comprando con él fue la mejor; superó nuestras expectativas.",
-      "source": "Google"
-    },
-    {
-      "name": "Cliente verificado",
-      "stars": 5,
-      "text": "Yeikol fue muy amable y atento desde el principio. Siempre estuvo disponible para ayudar e hizo el proceso mucho más fácil. Lo recomiendo ampliamente.",
-      "source": "Google"
-    },
-    {
-      "name": "Cliente verificado",
-      "stars": 5,
-      "text": "Mi experiencia fue realmente buena, Yeikol fue súper paciente, atento a cualquier duda que tuvimos, siempre explicando todo. Fue una experiencia maravillosa, lo recomiendo 100%.",
-      "source": "Google"
-    },
-    {
-      "name": "Maylon Rojas",
+      "name": "Maylon Rojas Vigoa",
       "stars": 5,
       "source": "Google",
       "text": "Excelente profesional. Jeiko Pérez hizo que todo el proceso fuera mucho más fácil y siempre estuvo disponible para orientarme y aclarar cualquier duda. Se nota su experiencia, dedicación y compromiso con sus clientes. Agradezco mucho toda su ayuda y lo recomiendo al 100%."
+    },
+    {
+      "name": "Mark Villeda",
+      "stars": 5,
+      "source": "Google",
+      "text": "The Best Realtor ever"
+    },
+    {
+      "name": "Mileidy Torres Rabelo",
+      "stars": 5,
+      "source": "Google",
+      "text": "Yeikol te recomiendo al 100 % como realtor fue una gran experiencia, buen trato muy eficiente y eficaz en su trabajo logramos cumplir nuestro sueño como mismo lo habiamos planiado gracias a ti"
+    },
+    {
+      "name": "Catalina Diaz",
+      "stars": 5,
+      "source": "Google",
+      "text": "Yeikol es una excelente persona, muy profesional y con una energía única. Todo el proceso fue fluido y rápido. Quedamos muy satisfechos de su servicio! Recomendado un 100%"
+    },
+    {
+      "name": "Claudio Alejandro Cordero De La Paz",
+      "stars": 5,
+      "source": "Google",
+      "text": "Nunca pénese encontrar en una persona tan joven tanta experiencia y deseos de ayudar. Yeikol es un Realto que a pesar de su corta edad ha sabido aprovechar el tiempo y adquirir conocimientos que lo ha convertido en un experto en el tema de bienes raíces y a todo eso se le suma su carácter y personalidad. 100% recomendado. Nuestra experiencia al comprar con el fue la mejor, superó nuestras expectativas."
+    },
+    {
+      "name": "Gabriela Rojas",
+      "stars": 5,
+      "source": "Google",
+      "text": "Hoy puedo decir con orgullo que compré mi casa gracias a su ayuda. Desde el principio me orientó, respondió todas mis dudas y me acompañó en cada paso. ¡Mil gracias por hacer este sueño realidad!"
+    },
+    {
+      "name": "GRECCO",
+      "stars": 5,
+      "source": "Google",
+      "text": "Yeikol fue muy amable y atento desde el primer momento. Siempre estuvo disponible para ayudar y hacer el proceso mucho más fácil. Lo recomiendo completamente."
+    },
+    {
+      "name": "Panchito Castro",
+      "stars": 5,
+      "source": "Google",
+      "text": "Increíble. 🤩"
+    },
+    {
+      "name": "Dayanis Hernández",
+      "stars": 5,
+      "source": "Google",
+      "text": "Es un excelente realtor, colega y persona. Super professional y muy bueno en su trabajo. Lo respeto, lo admiro y lo quiero siempre el realtor mas rápido McQueen"
     }
   ]
 }
