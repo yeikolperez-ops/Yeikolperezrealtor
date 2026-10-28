@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reviso tu caso gratis — Yeikol Perez, Palm Beach County</title>
+<meta name="description" content="Mira el video, responde 4 preguntas rápidas y déjame tus datos. Reviso tu caso gratis y te digo exactamente qué programas te aplican para comprar tu primera casa en Palm Beach County.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0a1628; --gold:#c9a84c; --gold-light:#e8c97a; --cream:#faf7f2;
+    --text-dark:#1a1a2e; --text-mid:#4a4a6a; --border:rgba(201,168,76,.3);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text-dark);line-height:1.6;min-height:100vh}
+  .topbar{background:var(--navy);color:#fff;text-align:center;padding:26px 18px 22px}
+  .topbar .name{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;letter-spacing:.5px}
+  .topbar .sub{color:var(--gold-light);font-size:13px;letter-spacing:2px;text-transform:uppercase;margin-top:2px}
+  .wrap{max-width:640px;margin:0 auto;padding:26px 18px 50px}
+  .progress{height:6px;background:#e7e0cf;border-radius:99px;overflow:hidden;margin-bottom:22px;display:none}
+  .progress div{height:100%;background:var(--gold);width:0;transition:width .35s ease}
+  .screen{display:none}
+  .screen.active{display:block;animation:fade .3s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  h1{font-family:'Playfair Display',serif;font-size:clamp(26px,5.5vw,36px);line-height:1.2;color:var(--navy);text-align:center;margin-bottom:10px}
+  h1 .gold{color:var(--gold)}
+  .lead{text-align:center;color:var(--text-mid);font-size:16.5px;max-width:520px;margin:0 auto 20px}
+  .video{position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(10,22,40,.18);margin-bottom:22px;background:#000}
+  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .btn{display:block;width:100%;background:var(--gold);color:var(--navy);border:0;font-family:'DM Sans',sans-serif;font-weight:700;font-size:18px;padding:16px 22px;border-radius:999px;cursor:pointer;transition:transform .1s ease, box-shadow .2s ease;box-shadow:0 6px 18px rgba(201,168,76,.35)}
+  .btn:hover{transform:translateY(-1px)}
+  .btn:disabled{opacity:.55;cursor:wait}
+  .microcopy{text-align:center;color:var(--text-mid);font-size:13.5px;margin-top:12px}
+  .q-title{font-family:'Playfair Display',serif;font-size:24px;color:var(--navy);text-align:center;margin-bottom:6px}
+  .q-sub{text-align:center;color:var(--text-mid);font-size:14.5px;margin-bottom:20px}
+  .opts{display:grid;gap:12px}
+  .opt{background:#fff;border:1.5px solid var(--border);border-radius:12px;padding:16px 18px;font-size:17px;font-weight:500;cursor:pointer;text-align:left;transition:border-color .15s ease, background .15s ease;width:100%;font-family:'DM Sans',sans-serif;color:var(--text-dark)}
+  .opt:hover{border-color:var(--gold);background:#fffdf6}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-weight:600;font-size:15px;margin-bottom:6px;color:var(--navy)}
+  .field input{width:100%;padding:14px 16px;border:1.5px solid var(--border);border-radius:12px;font-size:17px;font-family:'DM Sans',sans-serif;background:#fff;color:var(--text-dark)}
+  .field input:focus{outline:none;border-color:var(--gold)}
+  .error{display:none;background:#fdecea;color:#a33327;border-radius:10px;padding:12px 16px;font-size:14.5px;margin-bottom:16px}
+  .back{background:none;border:0;color:var(--text-mid);font-size:14.5px;cursor:pointer;margin-top:16px;text-decoration:underline;font-family:'DM Sans',sans-serif}
+  .success-emoji{font-size:52px;text-align:center;margin-bottom:8px}
+  .success h1{margin-bottom:12px}
+  .tel-cta{display:block;text-align:center;margin-top:18px;color:var(--navy);font-weight:700;font-size:18px;text-decoration:none}
+  footer{text-align:center;color:#8888aa;font-size:13px;padding:0 18px 34px}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="name">Yeikol Perez</div>
+  <div class="sub">Bienes Raíces · Palm Beach County</div>
+</header>
+
+<main class="wrap">
+  <div class="progress" id="progress"><div id="progressBar"></div></div>
+
+  <!-- PASO 0: VIDEO -->
+  <section class="screen active" id="s0">
+    <h1>¿Quieres comprar tu primera casa en <span class="gold">Palm Beach County</span>?</h1>
+    <p class="lead">Mira este video de 2 minutos. Te puede ahorrar decenas de miles de dólares.</p>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/hvU3PiZCtwA" title="Video del funnel — Yeikol Perez" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <button class="btn" onclick="go(1)">Revisar mi caso gratis →</button>
+    <p class="microcopy">Sin compromiso. La revisión no te cuesta nada.</p>
+  </section>
+
+  <!-- PREGUNTAS -->
+  <section class="screen" id="s1">
+    <h2 class="q-title">¿Cuánto ganas al mes, aproximadamente?</h2>
+    <p class="q-sub">Esto define para cuánto puedes calificar.</p>
+    <div class="opts" data-q="ingreso">
+      <button class="opt">Menos de $4,000</button>
+      <button class="opt">$4,000 – $6,000</button>
+      <button class="opt">$6,000 – $8,000</button>
+      <button class="opt">Más de $8,000</button>
+      <button class="opt">Prefiero decirlo en la llamada</button>
+    </div>
+    <button class="back" onclick="go(0)">← Volver</button>
+  </section>
+
+  <section class="screen" id="s2">
+    <h2 class="q-title">¿Tienes deudas ahora mismo?</h2>
+    <p class="q-sub">Carro, tarjetas, préstamos… sé honesto, esto es solo para tu cálculo.</p>
+    <div class="opts" data-q="deudas">
+      <button class="opt">Sí, tengo deudas</button>
+      <button class="opt">No tengo deudas</button>
+      <button class="opt">Prefiero decirlo en la llamada</button>
+    </div>
+    <button class="back" onclick="go(1)">← Volver</button>
+  </section>
+
+  <section class="screen" id="s3">
+    <h2 class="q-title">¿Para cuándo quieres comprar?</h2>
+    <p class="q-sub">Sin presión. Es para saber cómo ayudarte mejor.</p>
+    <div class="opts" data-q="timeline">
+      <button class="opt">Lo antes posible</button>
+      <button class="opt">En 1 a 3 meses</button>
+      <button class="opt">En 3 a 6 meses</button>
+      <button class="opt">Solo estoy mirando por ahora</button>
+    </div>
+    <button class="back" onclick="go(2)">← Volver</button>
+  </section>
+
+  <section class="screen" id="s4">
+    <h2 class="q-title">¿Ya tienes pre-aprobación del banco?</h2>
+    <p class="q-sub">Si no sabes qué es, marca esa opción sin pena.</p>
+    <div class="opts" data-q="preaprobacion">
+      <button class="opt">Sí</button>
+      <button class="opt">No</button>
+      <button class="opt">No sé qué es eso</button>
+    </div>
+    <button class="back" onclick="go(3)">← Volver</button>
+  </section>
+
+  <!-- DATOS -->
+  <section class="screen" id="s5">
+    <h2 class="q-title">Ya casi. ¿A quién le reviso el caso?</h2>
+    <p class="q-sub">Con tus respuestas y estos datos te digo exactamente qué programas te aplican.</p>
+    <div class="error" id="formError"></div>
+    <form id="dataForm" novalidate>
+      <div class="field">
+        <label for="f-nombre">Tu nombre</label>
+        <input id="f-nombre" type="text" autocomplete="name" placeholder="Ej: María López">
+      </div>
+      <div class="field">
+        <label for="f-telefono">Tu teléfono (WhatsApp)</label>
+        <input id="f-telefono" type="tel" autocomplete="tel" inputmode="tel" placeholder="Ej: 5615551234">
+      </div>
+      <div class="field">
+        <label for="f-email">Tu email (opcional)</label>
+        <input id="f-email" type="email" autocomplete="email" placeholder="tu@email.com">
+      </div>
+      <button class="btn" type="submit" id="submitBtn">Enviar y revisar mi caso →</button>
+      <p class="microcopy">Te escribo hoy mismo. Sin spam, sin compromiso.</p>
+    </form>
+    <button class="back" onclick="go(4)">← Volver</button>
+  </section>
+
+  <!-- ÉXITO -->
+  <section class="screen success" id="s6">
+    <div class="success-emoji">✅</div>
+    <h1>¡Listo, <span id="successName">gracias</span>!</h1>
+    <p class="lead">Ya recibí tus datos. Reviso tu caso y te escribo hoy mismo al WhatsApp que me dejaste, con los programas que te aplican y tu siguiente paso.</p>
+    <p class="lead">Si quieres adelantar, llámame o escríbeme directo:</p>
+    <a class="tel-cta" href="tel:+15614299853">(561) 429-9853</a>
+  </section>
+</main>
+
+<footer>
+  Yeikol Perez · Partnership Realty Inc. · Lic. FL #3630532 · Palm Beach County, FL
+</footer>
+
+<script>
+  var FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScI7DtWRxQ0OW_lhg7LGeQWi_gfqClkE4KvBBGpM89f3QgwZA/formResponse";
+  var ENTRY = {
+    ingreso:       "entry.1979029461",
+    deudas:        "entry.1818797633",
+    timeline:      "entry.1220000020",
+    preaprobacion: "entry.1299421261",
+    nombre:        "entry.1459348921",
+    telefono:      "entry.511661255",
+    email:         "entry.1352067264"
+  };
+  var answers = {};
+  var TOTAL_STEPS = 5; // s1..s5
+
+  function go(n){
+    document.querySelectorAll('.screen').forEach(function(s){ s.classList.remove('active'); });
+    document.getElementById('s'+n).classList.add('active');
+    var bar = document.getElementById('progress');
+    if(n >= 1 && n <= 5){
+      bar.style.display = 'block';
+      document.getElementById('progressBar').style.width = (n / TOTAL_STEPS * 100) + '%';
+    } else {
+      bar.style.display = 'none';
+    }
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  document.querySelectorAll('.opts').forEach(function(group){
+    var q = group.getAttribute('data-q');
+    group.querySelectorAll('.opt').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        answers[q] = btn.textContent.trim();
+        var current = parseInt(group.closest('.screen').id.replace('s',''), 10);
+        go(current + 1);
+      });
+    });
+  });
+
+  document.getElementById('dataForm').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var nombre = document.getElementById('f-nombre').value.trim();
+    var telefonoRaw = document.getElementById('f-telefono').value.trim();
+    var telefono = telefonoRaw.replace(/\D/g,'');
+    if(telefono.length === 11 && telefono.charAt(0) === '1'){ telefono = telefono.slice(1); }
+    var email = document.getElementById('f-email').value.trim();
+    var err = document.getElementById('formError');
+    if(!nombre){
+      err.textContent = "Pon tu nombre para saber a quién le reviso el caso.";
+      err.style.display = 'block'; return;
+    }
+    if(telefono.length !== 10){
+      err.textContent = "Revisa el teléfono: tiene que ser un número de EE.UU. de 10 dígitos.";
+      err.style.display = 'block'; return;
+    }
+    err.style.display = 'none';
+    var btn = document.getElementById('submitBtn');
+    btn.disabled = true; btn.textContent = "Enviando…";
+
+    var data = new FormData();
+    data.append(ENTRY.ingreso, answers.ingreso || "");
+    data.append(ENTRY.deudas, answers.deudas || "");
+    data.append(ENTRY.timeline, answers.timeline || "");
+    data.append(ENTRY.preaprobacion, answers.preaprobacion || "");
+    data.append(ENTRY.nombre, nombre);
+    data.append(ENTRY.telefono, telefono);
+    if(email){ data.append(ENTRY.email, email); }
+
+    fetch(FORM_URL, { method: "POST", mode: "no-cors", body: data })
+      .then(function(){
+        document.getElementById('successName').textContent = nombre.split(' ')[0];
+        go(6);
+      })
+      .catch(function(){
+        btn.disabled = false; btn.textContent = "Enviar y revisar mi caso →";
+        err.textContent = "Algo falló enviando. Inténtalo de nuevo o llámame al (561) 429-9853.";
+        err.style.display = 'block';
+      });
+  });
+</script>
+</body>
+</html>

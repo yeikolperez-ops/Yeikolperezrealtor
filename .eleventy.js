@@ -14,6 +14,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("guia-vivir-palm-beach");
   eleventyConfig.addPassthroughCopy("guia-compradores");
   eleventyConfig.addPassthroughCopy("guia-programas");
+  eleventyConfig.addPassthroughCopy("funnel");
   eleventyConfig.addPassthroughCopy("content/listings.json");
   eleventyConfig.addPassthroughCopy("content/testimonials.json");
   eleventyConfig.addPassthroughCopy("content/reviews.json");
