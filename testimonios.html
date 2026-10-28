@@ -203,7 +203,7 @@
       const res = await fetch('content/reviews.json?_=' + Date.now());
       const data = await res.json();
       document.getElementById('rv-rating').textContent = data.rating || '—';
-      document.getElementById('rv-count').textContent = (data.count || 0) + ' reseñas verificadas en Google';
+      document.getElementById('rv-count').textContent = 'Reseñas verificadas en Google';
       const grid = document.getElementById('review-grid');
       const items = data.items || [];
       grid.innerHTML = items.map(r => `
