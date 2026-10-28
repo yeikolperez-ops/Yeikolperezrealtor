@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reviso tu caso gratis — Yeikol Perez, Palm Beach County</title>
-<meta name="description" content="Mira el video, responde 4 preguntas rápidas y déjame tus datos. Reviso tu caso gratis y te digo exactamente qué programas te aplican para comprar tu primera casa en Palm Beach County.">
+<meta name="description" content="Mira el video, responde 5 preguntas rápidas y déjame tus datos. Reviso tu caso gratis y te digo exactamente qué programas te aplican para comprar tu primera casa en Palm Beach County.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -27,7 +27,7 @@
   .lead{text-align:center;color:var(--text-mid);font-size:16.5px;max-width:520px;margin:0 auto 20px}
   .video{position:relative;padding-top:56.25%;border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(10,22,40,.18);margin-bottom:22px;background:#000}
   .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-  .btn{display:block;width:100%;background:var(--gold);color:var(--navy);border:0;font-family:'DM Sans',sans-serif;font-weight:700;font-size:18px;padding:16px 22px;border-radius:999px;cursor:pointer;transition:transform .1s ease, box-shadow .2s ease;box-shadow:0 6px 18px rgba(201,168,76,.35)}
+  .btn{display:block;width:100%;background:var(--gold);color:var(--navy);border:0;font-family:'DM Sans',sans-serif;font-weight:700;font-size:18px;padding:16px 22px;border-radius:999px;cursor:pointer;transition:transform .1s ease, box-shadow .2s ease;box-shadow:0 6px 18px rgba(201,168,76,.35);text-align:center;text-decoration:none}
   .btn:hover{transform:translateY(-1px)}
   .btn:disabled{opacity:.55;cursor:wait}
   .microcopy{text-align:center;color:var(--text-mid);font-size:13.5px;margin-top:12px}
@@ -43,8 +43,8 @@
   .error{display:none;background:#fdecea;color:#a33327;border-radius:10px;padding:12px 16px;font-size:14.5px;margin-bottom:16px}
   .back{background:none;border:0;color:var(--text-mid);font-size:14.5px;cursor:pointer;margin-top:16px;text-decoration:underline;font-family:'DM Sans',sans-serif}
   .success-emoji{font-size:52px;text-align:center;margin-bottom:8px}
-  .success h1{margin-bottom:12px}
-  .tel-cta{display:block;text-align:center;margin-top:18px;color:var(--navy);font-weight:700;font-size:18px;text-decoration:none}
+  .hotbox{display:none;background:#fff;border:1.5px solid var(--gold);border-radius:14px;padding:22px;margin-top:8px}
+  .hotbox p{text-align:center;color:var(--text-dark);font-size:16.5px;margin-bottom:16px}
   footer{text-align:center;color:#8888aa;font-size:13px;padding:0 18px 34px}
 </style>
 </head>
@@ -84,6 +84,18 @@
   </section>
 
   <section class="screen" id="s2">
+    <h2 class="q-title">¿Cómo está tu crédito?</h2>
+    <p class="q-sub">Si no sabes tu número exacto, marca lo que creas. Sin pena.</p>
+    <div class="opts" data-q="credito">
+      <button class="opt">Bueno (680 o más)</button>
+      <button class="opt">Regular (620 – 679)</button>
+      <button class="opt">Bajo (menos de 620)</button>
+      <button class="opt">No lo sé</button>
+    </div>
+    <button class="back" onclick="go(1)">← Volver</button>
+  </section>
+
+  <section class="screen" id="s3">
     <h2 class="q-title">¿Tienes deudas ahora mismo?</h2>
     <p class="q-sub">Carro, tarjetas, préstamos… sé honesto, esto es solo para tu cálculo.</p>
     <div class="opts" data-q="deudas">
@@ -91,10 +103,10 @@
       <button class="opt">No tengo deudas</button>
       <button class="opt">Prefiero decirlo en la llamada</button>
     </div>
-    <button class="back" onclick="go(1)">← Volver</button>
+    <button class="back" onclick="go(2)">← Volver</button>
   </section>
 
-  <section class="screen" id="s3">
+  <section class="screen" id="s4">
     <h2 class="q-title">¿Para cuándo quieres comprar?</h2>
     <p class="q-sub">Sin presión. Es para saber cómo ayudarte mejor.</p>
     <div class="opts" data-q="timeline">
@@ -103,10 +115,10 @@
       <button class="opt">En 3 a 6 meses</button>
       <button class="opt">Solo estoy mirando por ahora</button>
     </div>
-    <button class="back" onclick="go(2)">← Volver</button>
+    <button class="back" onclick="go(3)">← Volver</button>
   </section>
 
-  <section class="screen" id="s4">
+  <section class="screen" id="s5">
     <h2 class="q-title">¿Ya tienes pre-aprobación del banco?</h2>
     <p class="q-sub">Si no sabes qué es, marca esa opción sin pena.</p>
     <div class="opts" data-q="preaprobacion">
@@ -114,11 +126,11 @@
       <button class="opt">No</button>
       <button class="opt">No sé qué es eso</button>
     </div>
-    <button class="back" onclick="go(3)">← Volver</button>
+    <button class="back" onclick="go(4)">← Volver</button>
   </section>
 
   <!-- DATOS -->
-  <section class="screen" id="s5">
+  <section class="screen" id="s6">
     <h2 class="q-title">Ya casi. ¿A quién le reviso el caso?</h2>
     <p class="q-sub">Con tus respuestas y estos datos te digo exactamente qué programas te aplican.</p>
     <div class="error" id="formError"></div>
@@ -138,16 +150,18 @@
       <button class="btn" type="submit" id="submitBtn">Enviar y revisar mi caso →</button>
       <p class="microcopy">Te escribo hoy mismo. Sin spam, sin compromiso.</p>
     </form>
-    <button class="back" onclick="go(4)">← Volver</button>
+    <button class="back" onclick="go(5)">← Volver</button>
   </section>
 
   <!-- ÉXITO -->
-  <section class="screen success" id="s6">
+  <section class="screen success" id="s7">
     <div class="success-emoji">✅</div>
     <h1>¡Listo, <span id="successName">gracias</span>!</h1>
-    <p class="lead">Ya recibí tus datos. Reviso tu caso y te escribo hoy mismo al WhatsApp que me dejaste, con los programas que te aplican y tu siguiente paso.</p>
-    <p class="lead">Si quieres adelantar, llámame o escríbeme directo:</p>
-    <a class="tel-cta" href="tel:+15614299853">(561) 429-9853</a>
+    <p class="lead">Ya recibí tus datos. Reviso tu caso y te escribo hoy mismo al WhatsApp que me dejaste, con los programas que te aplican y tu siguiente paso. Pendiente a tu teléfono.</p>
+    <div class="hotbox" id="hotbox">
+      <p><strong>Por tus respuestas, tu caso se ve fuerte.</strong> Si quieres, agenda tu llamada de una vez y adelantamos:</p>
+      <a class="btn" href="https://calendly.com/yeikolperez27" target="_blank" rel="noopener">Agendar mi llamada →</a>
+    </div>
   </section>
 </main>
 
@@ -159,6 +173,7 @@
   var FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScI7DtWRxQ0OW_lhg7LGeQWi_gfqClkE4KvBBGpM89f3QgwZA/formResponse";
   var ENTRY = {
     ingreso:       "entry.1979029461",
+    credito:       "entry.1106325833",
     deudas:        "entry.1818797633",
     timeline:      "entry.1220000020",
     preaprobacion: "entry.1299421261",
@@ -167,13 +182,13 @@
     email:         "entry.1352067264"
   };
   var answers = {};
-  var TOTAL_STEPS = 5; // s1..s5
+  var TOTAL_STEPS = 6; // s1..s6
 
   function go(n){
     document.querySelectorAll('.screen').forEach(function(s){ s.classList.remove('active'); });
     document.getElementById('s'+n).classList.add('active');
     var bar = document.getElementById('progress');
-    if(n >= 1 && n <= 5){
+    if(n >= 1 && n <= 6){
       bar.style.display = 'block';
       document.getElementById('progressBar').style.width = (n / TOTAL_STEPS * 100) + '%';
     } else {
@@ -192,6 +207,13 @@
       });
     });
   });
+
+  function isHot(){
+    var ingresoOk = (answers.ingreso === "$6,000 – $8,000" || answers.ingreso === "Más de $8,000");
+    var creditoOk = (answers.credito === "Bueno (680 o más)" || answers.credito === "Regular (620 – 679)");
+    var tiempoOk  = (answers.timeline === "Lo antes posible");
+    return ingresoOk && creditoOk && tiempoOk;
+  }
 
   document.getElementById('dataForm').addEventListener('submit', function(ev){
     ev.preventDefault();
@@ -215,6 +237,7 @@
 
     var data = new FormData();
     data.append(ENTRY.ingreso, answers.ingreso || "");
+    data.append(ENTRY.credito, answers.credito || "");
     data.append(ENTRY.deudas, answers.deudas || "");
     data.append(ENTRY.timeline, answers.timeline || "");
     data.append(ENTRY.preaprobacion, answers.preaprobacion || "");
@@ -225,11 +248,12 @@
     fetch(FORM_URL, { method: "POST", mode: "no-cors", body: data })
       .then(function(){
         document.getElementById('successName').textContent = nombre.split(' ')[0];
-        go(6);
+        if(isHot()){ document.getElementById('hotbox').style.display = 'block'; }
+        go(7);
       })
       .catch(function(){
         btn.disabled = false; btn.textContent = "Enviar y revisar mi caso →";
-        err.textContent = "Algo falló enviando. Inténtalo de nuevo o llámame al (561) 429-9853.";
+        err.textContent = "Algo falló enviando. Inténtalo de nuevo en un momento.";
         err.style.display = 'block';
       });
   });
