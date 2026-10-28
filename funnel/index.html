@@ -45,6 +45,15 @@
   .success-emoji{font-size:52px;text-align:center;margin-bottom:8px}
   .hotbox{display:none;background:#fff;border:1.5px solid var(--gold);border-radius:14px;padding:22px;margin-top:8px}
   .hotbox p{text-align:center;color:var(--text-dark);font-size:16.5px;margin-bottom:16px}
+  .proof{margin-top:30px;border-top:1px solid var(--border);padding-top:22px}
+  .proof-rating{text-align:center;font-size:16px;color:var(--navy);margin-bottom:16px}
+  .proof-rating .stars{color:var(--gold);letter-spacing:2px;font-size:18px}
+  .rev-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:12px}
+  .rev-card .rev-stars{color:var(--gold);letter-spacing:2px;font-size:13px}
+  .rev-card p{font-size:15px;color:var(--text-dark);margin:6px 0 8px}
+  .rev-card .rev-name{font-size:13.5px;color:var(--text-mid);font-weight:600}
+  .trust-line{text-align:center;font-size:14px;color:var(--text-mid);margin:-6px 0 18px}
+  .trust-line .stars{color:var(--gold);letter-spacing:1px}
   footer{text-align:center;color:#8888aa;font-size:13px;padding:0 18px 34px}
 </style>
 </head>
@@ -67,6 +76,20 @@
     </div>
     <button class="btn" onclick="go(1)">Revisar mi caso gratis →</button>
     <p class="microcopy">Sin compromiso. La revisión no te cuesta nada.</p>
+
+    <div class="proof">
+      <p class="proof-rating"><span class="stars">★★★★★</span><br><strong>4.8 en Google</strong> · 13 reseñas de clientes reales</p>
+      <div class="rev-card">
+        <span class="rev-stars">★★★★★</span>
+        <p>"Mi experiencia fue realmente buena, Yeikol fue un realtor súper paciente, atento en cualquier dudas que teníamos, explicó siempre las cosas, realmente fue una experiencia maravillosa lo recomiendo 100%."</p>
+        <span class="rev-name">Selina Elias · Reseña de Google</span>
+      </div>
+      <div class="rev-card">
+        <span class="rev-stars">★★★★★</span>
+        <p>"Excelente profesional. Jeiko Pérez hizo que todo el proceso fuera mucho más fácil y siempre estuvo disponible para orientarme y aclarar cualquier duda."</p>
+        <span class="rev-name">Maylon Rojas Vigoa · Reseña de Google</span>
+      </div>
+    </div>
   </section>
 
   <!-- PREGUNTAS -->
@@ -133,6 +156,7 @@
   <section class="screen" id="s6">
     <h2 class="q-title">Ya casi. ¿A quién le reviso el caso?</h2>
     <p class="q-sub">Con tus respuestas y estos datos te digo exactamente qué programas te aplican.</p>
+    <p class="trust-line"><span class="stars">★★★★★</span> 4.8 en Google · 13 reseñas de clientes reales</p>
     <div class="error" id="formError"></div>
     <form id="dataForm" novalidate>
       <div class="field">
