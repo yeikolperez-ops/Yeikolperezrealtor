@@ -18,6 +18,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("documentos-w2");
   eleventyConfig.addPassthroughCopy("documentos-1099");
   eleventyConfig.addPassthroughCopy("guia-recast");
+  eleventyConfig.addPassthroughCopy("guia-escuela");
   eleventyConfig.addPassthroughCopy("funnel");
   eleventyConfig.addPassthroughCopy("casa");
   eleventyConfig.addPassthroughCopy("content/listings.json");
