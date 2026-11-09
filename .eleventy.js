@@ -22,6 +22,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("sitios-inversionistas");
   eleventyConfig.addPassthroughCopy("funnel");
   eleventyConfig.addPassthroughCopy("casa");
+  eleventyConfig.addPassthroughCopy("instagram");
+  eleventyConfig.addPassthroughCopy("tiktok");
+  eleventyConfig.addPassthroughCopy("facebook");
+  eleventyConfig.addPassthroughCopy("youtube");
   eleventyConfig.addPassthroughCopy("content/listings.json");
   eleventyConfig.addPassthroughCopy("content/testimonials.json");
   eleventyConfig.addPassthroughCopy("content/reviews.json");
