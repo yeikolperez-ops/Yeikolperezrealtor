@@ -248,8 +248,18 @@
     preaprobacion: "entry.1299421261",
     nombre:        "entry.1459348921",
     telefono:      "entry.511661255",
-    email:         "entry.1352067264"
+    email:         "entry.1352067264",
+    origen:        "entry.784268310"
   };
+  // Origen por plataforma: se lee el utm_source del link (instagram, tiktok,
+  // facebook, youtube). Sin utm = "directo". No se muestra en el formulario.
+  var ORIGEN = (function(){
+    try {
+      var s = new URLSearchParams(window.location.search).get("utm_source") || "";
+      s = s.toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 40);
+      return s || "directo";
+    } catch(e){ return "directo"; }
+  })();
   var answers = {};
   var TOTAL_STEPS = 6; // s1..s6
 
@@ -312,6 +322,7 @@
     data.append(ENTRY.preaprobacion, answers.preaprobacion || "");
     data.append(ENTRY.nombre, nombre);
     data.append(ENTRY.telefono, telefono);
+    data.append(ENTRY.origen, ORIGEN);
     if(email){ data.append(ENTRY.email, email); }
 
     fetch(FORM_URL, { method: "POST", mode: "no-cors", body: data })
