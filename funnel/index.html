@@ -260,6 +260,8 @@
       return s || "directo";
     } catch(e){ return "directo"; }
   })();
+  // Ya capturado el origen, la barra queda limpia pa'l visitante.
+  if (window.location.search) { history.replaceState(null, '', window.location.pathname); }
   var answers = {};
   var TOTAL_STEPS = 6; // s1..s6
 
