@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La tabla por ciudad: cuánto necesitas ganar pa' comprar en cada ciudad | Yeikol Perez</title>
+<meta name="description" content="Precio típico de casa unifamiliar, pago mensual aproximado con taxes y seguro incluidos, ingreso que necesitas e inicial aproximada, ciudad por ciudad en Palm Beach County: Boynton Beach, Lake Worth, Greenacres, Palm Springs, West Palm Beach y Royal Palm Beach. Por Yeikol Perez, realtor.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --cream: #faf7f2;
+    --text-dark: #1a1a2e;
+    --text-mid: #4a4a6a;
+    --border: rgba(201,168,76,0.25);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text-dark); line-height: 1.7; }
+  .hero { background: var(--navy); color: white; padding: 56px 24px 44px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%); }
+  .badge { display: inline-block; border: 1px solid var(--gold); color: var(--gold-light); padding: 5px 16px; border-radius: 999px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; position: relative; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 6vw, 46px); font-weight: 900; line-height: 1.15; margin-bottom: 16px; position: relative; }
+  .hero h1 .gold { color: var(--gold); }
+  .hero p { max-width: 620px; margin: 0 auto; color: #cfd3e0; font-size: 17px; position: relative; }
+  .byline { margin-top: 22px; font-size: 14px; color: #9aa0b5; position: relative; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 60px; }
+  h2 { font-family: 'Playfair Display', serif; font-size: 26px; margin: 38px 0 12px; color: var(--navy); }
+  p { margin-bottom: 14px; color: var(--text-dark); font-size: 16.5px; }
+  .muted { color: var(--text-mid); }
+  .ciudad { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 24px 26px; margin: 22px 0; }
+  .ciudad h3 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--navy); margin-bottom: 2px; }
+  .ciudad .precio { color: var(--text-mid); font-size: 15.5px; margin-bottom: 14px; }
+  .ciudad .pago { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+  .ciudad .pago .big { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 900; color: var(--navy); line-height: 1; }
+  .ciudad .pago .lbl { font-size: 14px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  .desglose { list-style: none; border-top: 1px solid var(--border); padding-top: 12px; }
+  .desglose li { display: flex; justify-content: space-between; font-size: 15.5px; padding: 3px 0; color: var(--text-mid); }
+  .desglose li strong { color: var(--text-dark); }
+  .ingreso { background: var(--navy); color: white; border-radius: 10px; padding: 14px 18px; margin-top: 16px; font-size: 16.5px; text-align: center; }
+  .ingreso strong { color: var(--gold); font-size: 19px; }
+  .honesto { background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--gold); border-radius: 10px; padding: 20px 22px; margin: 26px 0; }
+  .honesto strong { color: var(--navy); }
+  .cta { background: var(--navy); border-radius: 14px; padding: 30px 26px; text-align: center; margin-top: 42px; }
+  .cta h2 { color: white; margin-top: 0; }
+  .cta p { color: #cfd3e0; }
+  .cta a.btn { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 600; padding: 13px 30px; border-radius: 999px; text-decoration: none; margin-top: 8px; }
+  .cta .tel { display: block; margin-top: 14px; color: var(--gold-light); text-decoration: none; font-size: 17px; }
+  footer { text-align: center; padding: 26px 20px 40px; color: #8888aa; font-size: 13.5px; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <span class="badge">Guía corta</span>
+  <h1>Cuánto necesitas ganar pa' comprar <span class="gold">en tu ciudad</span></h1>
+  <p>Casi nadie sabe cuánto tiene que ganar pa' comprar una casa en su propia ciudad. Aquí está la tabla, ciudad por ciudad, ya con taxes y seguro incluidos.</p>
+  <div class="byline">Por Yeikol Perez · Agente de bienes raíces · Partnership Realty Inc. · Lic. FL #3630532</div>
+</header>
+
+<main class="wrap">
+
+  <p>Cada ciudad pide algo distinto: cambia el precio de la casa, cambia el pago y cambia el ingreso que necesitas. Busca tu ciudad y míralo claro. Los números son <strong>aproximados</strong>: el exacto depende de tu crédito y tus deudas, pero esto te da el número real con el que se trabaja aquí.</p>
+
+  <div class="ciudad">
+    <h3>Boynton Beach</h3>
+    <p class="precio">Casa típica: <strong>$450,000</strong> · Inicial aprox. (FHA 3.5%): <strong>$15,750</strong></p>
+    <div class="pago"><span class="big">≈ $3,700</span><span class="lbl">pago mensual con todo incluido</span></div>
+    <ul class="desglose">
+      <li><span>Principal e intereses</span><strong>$2,745</strong></li>
+      <li><span>Taxes (estimado)</span><strong>$394</strong></li>
+      <li><span>Seguro (estimado)</span><strong>$561</strong></li>
+    </ul>
+    <div class="ingreso">Ingreso que necesitas en el hogar: <strong>≈ $8,300/mes</strong></div>
+  </div>
+
+  <div class="ciudad">
+    <h3>Lake Worth</h3>
+    <p class="precio">Casa típica: <strong>$475,000</strong> · Inicial aprox. (FHA 3.5%): <strong>$16,625</strong></p>
+    <div class="pago"><span class="big">≈ $3,900</span><span class="lbl">pago mensual con todo incluido</span></div>
+    <ul class="desglose">
+      <li><span>Principal e intereses</span><strong>$2,897</strong></li>
+      <li><span>Taxes (estimado)</span><strong>$416</strong></li>
+      <li><span>Seguro (estimado)</span><strong>$587</strong></li>
+    </ul>
+    <div class="ingreso">Ingreso que necesitas en el hogar: <strong>≈ $8,700/mes</strong></div>
+  </div>
+
+  <div class="ciudad">
+    <h3>Greenacres y Palm Springs</h3>
+    <p class="precio">Casa típica: <strong>$500,000</strong> · Inicial aprox. (FHA 3.5%): <strong>$17,500</strong></p>
+    <div class="pago"><span class="big">≈ $4,100</span><span class="lbl">pago mensual con todo incluido</span></div>
+    <ul class="desglose">
+      <li><span>Principal e intereses</span><strong>$3,050</strong></li>
+      <li><span>Taxes (estimado)</span><strong>$438</strong></li>
+      <li><span>Seguro (estimado)</span><strong>$612</strong></li>
+    </ul>
+    <div class="ingreso">Ingreso que necesitas en el hogar: <strong>≈ $9,100/mes</strong></div>
+  </div>
+
+  <div class="ciudad">
+    <h3>West Palm Beach</h3>
+    <p class="precio">Casa típica: <strong>$500,000</strong> · Inicial aprox. (FHA 3.5%): <strong>$17,500</strong></p>
+    <div class="pago"><span class="big">≈ $4,100</span><span class="lbl">pago mensual con todo incluido</span></div>
+    <ul class="desglose">
+      <li><span>Principal e intereses</span><strong>$3,050</strong></li>
+      <li><span>Taxes (estimado)</span><strong>$438</strong></li>
+      <li><span>Seguro (estimado)</span><strong>$612</strong></li>
+    </ul>
+    <div class="ingreso">Ingreso que necesitas en el hogar: <strong>≈ $9,100/mes</strong></div>
+  </div>
+
+  <div class="ciudad">
+    <h3>Royal Palm Beach</h3>
+    <p class="precio">Casa típica: <strong>$525,000</strong> · Inicial aprox. (FHA 3.5%): <strong>$18,375</strong></p>
+    <div class="pago"><span class="big">≈ $4,300</span><span class="lbl">pago mensual con todo incluido</span></div>
+    <ul class="desglose">
+      <li><span>Principal e intereses</span><strong>$3,202</strong></li>
+      <li><span>Taxes (estimado)</span><strong>$459</strong></li>
+      <li><span>Seguro (estimado)</span><strong>$639</strong></li>
+    </ul>
+    <div class="ingreso">Ingreso que necesitas en el hogar: <strong>≈ $9,500/mes</strong></div>
+  </div>
+
+  <div class="honesto">
+    <p style="margin:0"><strong>Cómo se calculó esto:</strong> préstamo FHA con 3.5% de inicial, tasa aproximada de 6.5%, taxes y seguro de Florida incluidos en el pago, y sin contar otras deudas. Si tienes deudas (carro, tarjetas, préstamos), el ingreso que necesitas sube. Por eso el número exacto se saca con tu caso: tu crédito, tus deudas y tu ciudad.</p>
+  </div>
+
+  <div class="cta">
+    <h2>¿Quieres TU número exacto?</h2>
+    <p>Mándame tu ciudad y más o menos cuánto gana tu hogar, y te digo si con eso da y cuál sería tu siguiente paso. Sin compromiso.</p>
+    <a class="btn" href="https://www.instagram.com/yeikolpalmbeachrealtor">Escríbeme por Instagram</a>
+    <a class="tel" href="tel:+15614299853">(561) 429-9853</a>
+  </div>
+
+</main>
+
+<footer>
+  Yeikol Perez · Partnership Realty Inc. · Lic. FL #3630532 · Palm Beach County, FL<br>
+  La información de esta página es general y puede cambiar. Los números son aproximados; los confirma el lender en cada caso.
+</footer>
+
+</body>
+</html>
