@@ -21,6 +21,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("guia-escuela");
   eleventyConfig.addPassthroughCopy("sitios-inversionistas");
   eleventyConfig.addPassthroughCopy("tabla-ciudades");
+  eleventyConfig.addPassthroughCopy("tabla");
+  eleventyConfig.addPassthroughCopy("agenda");
   eleventyConfig.addPassthroughCopy("funnel");
   eleventyConfig.addPassthroughCopy("casa");
   eleventyConfig.addPassthroughCopy("instagram");
