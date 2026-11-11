@@ -833,5 +833,38 @@
   Esta guía es informativa. Los programas de asistencia cambian — contáctame para verificar disponibilidad actual.
 </div>
 
+<script>
+  // Origen por plataforma: si el visitante llega con utm (ej. desde el link
+  // /guia-youtube de las descripciones de YouTube), el origen se captura, se
+  // guarda en la sesión y se le pasa al link de Calendly pa' que la cita
+  // quede marcada con su origen. La barra queda limpia pa'l visitante.
+  (function(){
+    function clean(v){ return (v || "").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 60); }
+    try {
+      var q = new URLSearchParams(window.location.search);
+      var utm = {
+        utm_source:   clean(q.get("utm_source")),
+        utm_medium:   clean(q.get("utm_medium")),
+        utm_campaign: clean(q.get("utm_campaign"))
+      };
+      if (utm.utm_source) {
+        try { sessionStorage.setItem("origen_utm", JSON.stringify(utm)); } catch(e){}
+      } else {
+        try { utm = JSON.parse(sessionStorage.getItem("origen_utm") || "{}"); } catch(e){ utm = {}; }
+      }
+      if (utm.utm_source) {
+        var qs = "utm_source=" + encodeURIComponent(utm.utm_source)
+               + (utm.utm_medium   ? "&utm_medium="   + encodeURIComponent(utm.utm_medium)   : "")
+               + (utm.utm_campaign ? "&utm_campaign=" + encodeURIComponent(utm.utm_campaign) : "");
+        document.querySelectorAll('a[href*="calendly.com"], a[href*="docs.google.com/forms"]').forEach(function(a){
+          var h = a.getAttribute("href");
+          a.setAttribute("href", h + (h.indexOf("?") === -1 ? "?" : "&") + qs);
+        });
+      }
+      if (window.location.search) { history.replaceState(null, '', window.location.pathname); }
+    } catch(e){}
+  })();
+</script>
+
 </body>
 </html>

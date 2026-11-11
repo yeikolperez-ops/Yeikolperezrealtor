@@ -32,6 +32,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("tiktok");
   eleventyConfig.addPassthroughCopy("facebook");
   eleventyConfig.addPassthroughCopy("youtube");
+  eleventyConfig.addPassthroughCopy("guia-youtube");
   eleventyConfig.addPassthroughCopy("content/listings.json");
   eleventyConfig.addPassthroughCopy("content/testimonials.json");
   eleventyConfig.addPassthroughCopy("content/reviews.json");
