@@ -33,6 +33,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("facebook");
   eleventyConfig.addPassthroughCopy("youtube");
   eleventyConfig.addPassthroughCopy("guia-youtube");
+  eleventyConfig.addPassthroughCopy("vivir-aqui");
   eleventyConfig.addPassthroughCopy("content/listings.json");
   eleventyConfig.addPassthroughCopy("content/testimonials.json");
   eleventyConfig.addPassthroughCopy("content/reviews.json");
