@@ -38,6 +38,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("vivir-bien");
   eleventyConfig.addPassthroughCopy("tabla-1099");
   eleventyConfig.addPassthroughCopy("ingreso-1099");
+  eleventyConfig.addPassthroughCopy("cierre");
+  eleventyConfig.addPassthroughCopy("gastos-de-cierre");
   eleventyConfig.addPassthroughCopy("content/listings.json");
   eleventyConfig.addPassthroughCopy("content/testimonials.json");
   eleventyConfig.addPassthroughCopy("content/reviews.json");
